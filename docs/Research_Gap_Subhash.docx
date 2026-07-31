@@ -1,0 +1,144 @@
+Paper 6
+
+Title: A Systematic Review of Green and Sustainable AI: Taxonomy, Metrics, Challenges, and Open Research Directions
+
+Link: https://doi.org/10.3390/su18084115
+
+Existing Method:
+The paper reviews different Green AI techniques, sustainability metrics, and AI optimization methods used to reduce energy consumption.
+
+Advantages:
+
+Comprehensive review of Green AI.
+Covers different sustainability metrics.
+Highlights current challenges.
+Identifies future research directions.
+
+Limitations:
+
+No practical implementation.
+Limited focus on cloud infrastructure.
+No real-time carbon monitoring.
+
+Research Gap:
+The paper does not provide a cloud-based framework for continuous carbon monitoring and sustainability management.
+
+Possible Improvement:
+Develop an AI-powered cloud framework that continuously tracks carbon emissions and provides optimization recommendations.
+
+---
+
+Paper 7
+
+Title: Strategies and Design for Increasing AI Sustainability
+
+Link: https://www.nature.com/articles/s44359-026-00195-w
+
+Existing Method:
+The paper discusses strategies for designing energy-efficient and sustainable AI systems.
+
+Advantages:
+
+Encourages sustainable AI practices.
+Focuses on reducing energy consumption.
+Promotes responsible AI development.
+
+Limitations:
+
+Mostly theoretical.
+No cloud implementation.
+No AI prediction model.
+
+Research Gap:
+The study lacks an automated cloud solution for monitoring and predicting carbon emissions.
+
+Possible Improvement:
+Integrate Green AI with cloud services to monitor, analyze, and reduce carbon emissions automatically.
+
+---
+
+
+Paper 8
+
+Title: Beyond the Carbon Emissions of Artificial Intelligence (AI): A Whole-Systems Energy and Environmental Sustainability Analysis of Datacenters in Denmark, Germany and Norway
+
+Link: https://www.sciencedirect.com/science/article/pii/S2214629626003105
+
+Existing Method:
+The authors evaluate the environmental impact of AI-enabled data centers using a whole-systems analysis.
+
+Advantages:
+
+Detailed environmental analysis.
+Considers renewable energy usage.
+Supports sustainability planning.
+
+Limitations:
+
+Focuses only on data centers.
+No cloud resource monitoring.
+No optimization recommendations.
+
+Research Gap:
+The study does not provide resource-level carbon tracking or intelligent cloud optimization.
+
+Possible Improvement:
+Develop a Digital Carbon Passport system for individual cloud resources with AI-based recommendations.
+
+---
+
+Paper 9
+
+Title: Digital Carbon Footprint Assessment of Universitas Indonesia Data Center Based on the GHG Protocol
+
+Link: https://link.springer.com/article/10.1007/s43621-026-03522-0
+
+Existing Method:
+The paper estimates data center carbon emissions using the Greenhouse Gas (GHG) Protocol.
+
+Advantages:
+
+Uses standard carbon calculation methods.
+Provides accurate emission estimates.
+Supports sustainability assessment.
+
+Limitations:
+
+Limited to one case study.
+No AI integration.
+No real-time monitoring.
+
+Research Gap:
+The paper lacks predictive analytics and automated sustainability monitoring.
+
+Possible Improvement:
+Combine carbon assessment with AI models and cloud monitoring services for continuous carbon tracking.
+
+---
+
+Paper 10
+
+Title: A Comprehensive Review of Digital Product Passports in Sustainable Manufacturing: Current State, Challenges, and Future Directions
+
+Link: https://link.springer.com/article/10.1007/s43615-026-00927-x
+
+Existing Method:
+The paper reviews Digital Product Passport technologies used in manufacturing industries.
+
+Advantages:
+
+Explains Digital Product Passport concepts.
+Supports sustainability and traceability.
+Encourages circular economy practices.
+
+Limitations:
+
+Limited to manufacturing.
+Not applicable to cloud infrastructure.
+No AI-based analytics.
+
+Research Gap:
+The concept of Digital Product Passports has not been extended to cloud infrastructure for carbon monitoring.
+
+Possible Improvement:
+Develop AI-powered Digital Carbon Passports for cloud resources to improve sustainability management.
