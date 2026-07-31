@@ -1,3 +1,9 @@
-# Abstract
+## AI-Powered Cloud Digital Carbon Passport Framework for Sustainable IT Infrastructure using Green AI and Carbon Intelligence Analytics
 
-To be updated by the project team.
+The rapid growth of cloud computing and Artificial Intelligence (AI) has significantly increased energy consumption and carbon emissions in modern IT infrastructures. Existing cloud monitoring solutions primarily focus on resource utilization, system performance, and operational costs, while providing limited visibility into the environmental impact of cloud resources. Organizations therefore face challenges in measuring, analyzing, and reducing their cloud carbon footprint.
+
+This project proposes an AI-Powered Cloud Digital Carbon Passport Framework that continuously monitors cloud infrastructure, estimates carbon emissions, and generates a Digital Carbon Passport for every cloud resource. The framework combines Green AI techniques with Carbon Intelligence Analytics to evaluate sustainability metrics, predict future carbon emissions, and recommend intelligent optimization strategies.
+
+The system collects cloud resource metrics such as CPU utilization, memory usage, storage consumption, network traffic, runtime, and power usage. These metrics are processed using Artificial Intelligence to estimate carbon emissions and generate sustainability scores. Each Digital Carbon Passport stores historical environmental records, AI predictions, and optimization recommendations.
+
+The framework is implemented using Amazon EC2, Amazon S3, Amazon RDS, AWS Lambda, Amazon SageMaker, Amazon API Gateway, Amazon Cognito, Amazon CloudWatch, Amazon SNS, Amazon QuickSight, AWS Glue, Amazon Athena, Amazon EventBridge, and AWS IAM. The proposed solution aims to improve cloud sustainability, optimize resource utilization, reduce carbon emissions, and support environmentally responsible cloud infrastructure management.
