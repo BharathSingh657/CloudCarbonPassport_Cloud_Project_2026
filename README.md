@@ -12,9 +12,10 @@ This project aims to develop an AI-powered cloud framework that monitors cloud r
 
 | Name | Registration Number |
 |------|----------------------|
+| Kothamasu Ratna Subhash | 24BIT0489 |
 | Bharath D Singh | 24BIT0458 |
 | R. Rahul Padmanaban | 24BIT0473 |
-| Kothamasu Ratna Subhash | 24BIT0489 |
+
 
 ---
 
