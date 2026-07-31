@@ -38,7 +38,7 @@ Cloud Carbon Footprint and Cloud Resource Utilization Dataset
 
 The dataset is used for:
 
-- Carbon emission estimation
+- Carbon emission estimation 
 - AI model training
 - Digital Carbon Passport generation
 - Sustainability analytics
