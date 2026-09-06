@@ -1,3 +1,3 @@
-# Raw Dataset
+# Raw Datasets
 
-This folder contains the original datasets before preprocessing.
+- `cloud_carbon_telemetry_dataset.csv` contains baseline illustrative workload telemetry data.
