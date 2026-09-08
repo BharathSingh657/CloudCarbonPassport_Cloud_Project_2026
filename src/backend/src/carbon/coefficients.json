@@ -1,0 +1,97 @@
+{
+  "version": "1.2.0-CCF-2026",
+  "methodology": "Cloud Carbon Footprint (CCF) Open Standard & GHG Protocol Corporate Standard",
+  "documentation": "https://www.cloudcarbonfootprint.org/docs/methodology",
+  "defaultPue": 1.18,
+  "memoryWattsPerGB": 0.000392,
+  "storageWattsPerGB": {
+    "ssd": 0.0012,
+    "hdd": 0.00065,
+    "s3Standard": 0.0008,
+    "s3Glacier": 0.0001
+  },
+  "scope3EmbodiedRatio": 0.18,
+  "scope2GridRatio": 0.82,
+  "instanceProfiles": {
+    "t3.nano": { "vCPU": 2, "memGB": 0.5, "idleW": 2.1, "maxW": 8.0, "family": "t3" },
+    "t3.micro": { "vCPU": 2, "memGB": 1.0, "idleW": 4.2, "maxW": 16.0, "family": "t3" },
+    "t3.small": { "vCPU": 2, "memGB": 2.0, "idleW": 6.3, "maxW": 24.0, "family": "t3" },
+    "t3.medium": { "vCPU": 2, "memGB": 4.0, "idleW": 8.5, "maxW": 32.0, "family": "t3" },
+    "t3.large": { "vCPU": 2, "memGB": 8.0, "idleW": 12.0, "maxW": 48.0, "family": "t3" },
+    "t3.xlarge": { "vCPU": 4, "memGB": 16.0, "idleW": 18.0, "maxW": 72.0, "family": "t3" },
+    "t3.2xlarge": { "vCPU": 8, "memGB": 32.0, "idleW": 34.0, "maxW": 128.0, "family": "t3" },
+    "m6i.large": { "vCPU": 2, "memGB": 8.0, "idleW": 12.0, "maxW": 48.0, "family": "m6i" },
+    "m6i.xlarge": { "vCPU": 4, "memGB": 16.0, "idleW": 24.0, "maxW": 96.0, "family": "m6i" },
+    "c6i.large": { "vCPU": 2, "memGB": 4.0, "idleW": 11.5, "maxW": 45.0, "family": "c6i" },
+    "c6i.4xlarge": { "vCPU": 16, "memGB": 32.0, "idleW": 95.0, "maxW": 380.0, "family": "c6i" },
+    "r6i.2xlarge": { "vCPU": 8, "memGB": 64.0, "idleW": 42.0, "maxW": 168.0, "family": "r6i" },
+    "db.t4g.micro": { "vCPU": 2, "memGB": 1.0, "idleW": 3.8, "maxW": 14.5, "family": "db.t4g" },
+    "db.t4g.medium": { "vCPU": 2, "memGB": 4.0, "idleW": 9.0, "maxW": 36.0, "family": "db.t4g" },
+    "db.r6g.xlarge": { "vCPU": 4, "memGB": 32.0, "idleW": 28.0, "maxW": 112.0, "family": "db.r6g" },
+    "lambda-function": { "vCPU": 2, "memGB": 2.0, "idleW": 0.1, "maxW": 15.0, "family": "serverless" },
+    "ecs-task": { "vCPU": 2, "memGB": 8.0, "idleW": 12.0, "maxW": 48.0, "family": "container" },
+    "s3-standard": { "vCPU": 0, "memGB": 0, "idleW": 0.8, "maxW": 1.2, "family": "storage" }
+  },
+  "gridCarbonIntensity": {
+    "ap-south-1": {
+      "name": "Asia Pacific (Mumbai, India)",
+      "country": "India",
+      "zone": "IN-WE",
+      "intensity": 708.0,
+      "unit": "gCO2e/kWh",
+      "renewablePct": 18.0,
+      "source": "CEA India CO2 Baseline Database v18 & Electricity Maps",
+      "lastUpdated": "2026-01-01"
+    },
+    "us-east-1": {
+      "name": "US East (N. Virginia, USA)",
+      "country": "USA",
+      "zone": "US-PJM",
+      "intensity": 378.0,
+      "unit": "gCO2e/kWh",
+      "renewablePct": 22.0,
+      "source": "EPA eGRID 2024 / RFC East",
+      "lastUpdated": "2026-01-01"
+    },
+    "us-west-2": {
+      "name": "US West (Oregon, USA)",
+      "country": "USA",
+      "zone": "US-NW-PACW",
+      "intensity": 115.0,
+      "unit": "gCO2e/kWh",
+      "renewablePct": 78.0,
+      "source": "EPA eGRID 2024 / NWPP",
+      "lastUpdated": "2026-01-01"
+    },
+    "eu-north-1": {
+      "name": "Europe (Stockholm, Sweden)",
+      "country": "Sweden",
+      "zone": "SE-SE3",
+      "intensity": 28.0,
+      "unit": "gCO2e/kWh",
+      "renewablePct": 95.0,
+      "source": "European Environment Agency (EEA) / Electricity Maps",
+      "lastUpdated": "2026-01-01"
+    },
+    "eu-west-1": {
+      "name": "Europe (Dublin, Ireland)",
+      "country": "Ireland",
+      "zone": "IE",
+      "intensity": 295.0,
+      "unit": "gCO2e/kWh",
+      "renewablePct": 42.0,
+      "source": "SEAI / EirGrid Smart Grid Monitor",
+      "lastUpdated": "2026-01-01"
+    },
+    "ap-southeast-1": {
+      "name": "Asia Pacific (Singapore)",
+      "country": "Singapore",
+      "zone": "SG",
+      "intensity": 412.0,
+      "unit": "gCO2e/kWh",
+      "renewablePct": 12.0,
+      "source": "Energy Market Authority (EMA) Singapore",
+      "lastUpdated": "2026-01-01"
+    }
+  }
+}
