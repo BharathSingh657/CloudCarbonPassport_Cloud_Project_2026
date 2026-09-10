@@ -1,0 +1,25 @@
+{
+  "datasetName": "Cloud Carbon Passport Infrastructure Telemetry Dataset (2026)",
+  "standards": ["ISO 14064", "GHG Protocol Corporate Standard", "Green Software Foundation"],
+  "totalRecords": 12,
+  "regionalGridProfiles": {
+    "us-east-1": { "name": "US East (N. Virginia)", "intensityGCO2perKWh": 378, "renewablePct": 22, "provider": "PJM Grid" },
+    "us-west-2": { "name": "US West (Oregon)", "intensityGCO2perKWh": 115, "renewablePct": 78, "provider": "BPA Hydro" },
+    "eu-north-1": { "name": "Europe (Stockholm)", "intensityGCO2perKWh": 28, "renewablePct": 95, "provider": "Nordic Hydro/Wind" },
+    "eu-west-1": { "name": "Europe (Ireland)", "intensityGCO2perKWh": 295, "renewablePct": 42, "provider": "EirGrid" },
+    "ap-south-1": { "name": "Asia Pacific (Mumbai)", "intensityGCO2perKWh": 708, "renewablePct": 18, "provider": "Tata/State Grid" },
+    "ap-southeast-1": { "name": "Asia Pacific (Singapore)", "intensityGCO2perKWh": 412, "renewablePct": 12, "provider": "EMA Grid" }
+  },
+  "hardwarePowerProfiles": {
+    "t3.medium": { "idleW": 8.5, "maxW": 32, "vCPU": 2, "memGB": 4 },
+    "t3.2xlarge": { "idleW": 34.0, "maxW": 128, "vCPU": 8, "memGB": 32 },
+    "c6i.4xlarge": { "idleW": 95.0, "maxW": 380, "vCPU": 16, "memGB": 32 },
+    "m6i.xlarge": { "idleW": 24.0, "maxW": 96, "vCPU": 4, "memGB": 16 },
+    "r6i.2xlarge": { "idleW": 42.0, "maxW": 168, "vCPU": 8, "memGB": 64 },
+    "db.r6g.xlarge": { "idleW": 28.0, "maxW": 112, "vCPU": 4, "memGB": 32 },
+    "db.t4g.medium": { "idleW": 9.0, "maxW": 36, "vCPU": 2, "memGB": 4 },
+    "s3-standard": { "idleW": 0.8, "maxW": 1.2, "vCPU": 0, "memGB": 0 },
+    "lambda-function": { "idleW": 0.1, "maxW": 15, "vCPU": 2, "memGB": 2 },
+    "ecs-task": { "idleW": 12.0, "maxW": 48, "vCPU": 2, "memGB": 8 }
+  }
+}
