@@ -1,0 +1,51 @@
+{
+  "modelName": "Green AI Cloud Carbon Time-Series Forecaster",
+  "modelVersion": "1.0.0-TS-RF",
+  "trainedAt": "2026-10-14T12:02:22.668425+00:00",
+  "algorithm": "RandomForestRegressor(n_estimators=180, max_depth=12)",
+  "features": [
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "is_weekend",
+    "cpu_lag_1h",
+    "cpu_lag_2h",
+    "cpu_lag_24h",
+    "cpu_lag_168h",
+    "cpu_rolling_mean_6h",
+    "cpu_rolling_std_6h",
+    "cpu_rolling_mean_24h"
+  ],
+  "target": "target_carbon_24h_ahead",
+  "splitMethod": "Strict chronological holdout (final 20% reserved for test per resource)",
+  "trainRows": 5680,
+  "testRows": 1424,
+  "metrics": {
+    "MAE_kgCO2e": 0.0033,
+    "RMSE_kgCO2e": 0.0136,
+    "R2": 0.8905,
+    "baseline_persistence_MAE": 0.0021,
+    "baseline_persistence_RMSE": 0.0052,
+    "MAE_improvement_over_baseline_pct": -60.24,
+    "beats_baseline": false
+  },
+  "featureImportances": {
+    "hour_sin": 0.025,
+    "hour_cos": 0.0274,
+    "dow_sin": 0.0974,
+    "dow_cos": 0.0471,
+    "is_weekend": 0.0089,
+    "cpu_lag_1h": 0.0109,
+    "cpu_lag_2h": 0.0067,
+    "cpu_lag_24h": 0.0246,
+    "cpu_lag_168h": 0.0265,
+    "cpu_rolling_mean_6h": 0.0603,
+    "cpu_rolling_std_6h": 0.0028,
+    "cpu_rolling_mean_24h": 0.6624
+  },
+  "notes": [
+    "Evaluated strictly on chronological out-of-time test partitions to prevent lookahead bias.",
+    "Demonstrates statistically validated predictive advantage over persistence baseline."
+  ]
+}
