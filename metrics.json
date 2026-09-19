@@ -1,0 +1,6 @@
+{
+  "Id": "EntireBucket",
+  "Filter": {
+    "Prefix": ""
+  }
+}
