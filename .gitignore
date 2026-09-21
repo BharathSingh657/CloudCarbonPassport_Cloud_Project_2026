@@ -1,0 +1,26 @@
+# Node.js
+node_modules/
+**/node_modules/
+package-lock.json
+
+# Environment variables
+.env
+**/.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Build folders
+dist/
+**/dist/
+build/
+**/build/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
