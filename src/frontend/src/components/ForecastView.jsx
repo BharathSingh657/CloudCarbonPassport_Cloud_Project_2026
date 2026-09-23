@@ -1,65 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid 
 } from 'recharts';
 import { TrendingDown, Sparkles, AlertCircle, CheckCircle, ShieldCheck, ArrowRight } from 'lucide-react';
+import { GlassSurface, PillNav, SimpleGraph } from './ReactBits';
 
 export default function ForecastView({ forecastData, onNavigateToRecs }) {
+  const [activeSection, setActiveSection] = useState('overview');
+
   if (!forecastData) return null;
 
   const { summary, dailyForecast } = forecastData;
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
         <div>
-          <h2 className="text-xl font-extrabold text-slate-100 tracking-tight flex items-center space-x-2">
-            <Sparkles className="w-5 h-5 text-emerald-400" />
-            <span>Green AI 7-Day Carbon Emission Predictive Forecast</span>
+          <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-emerald-300">Predictive Planning</p>
+          <h2 className="mt-1 flex items-center gap-2 text-2xl font-semibold tracking-tight text-slate-100">
+            <Sparkles className="h-5 w-5 text-emerald-400" />
+            <span>Green AI 7-Day Forecast</span>
           </h2>
-          <p className="text-xs text-gray-400 mt-1">
-            Machine Learning forecasting model anticipating grid intensity fluctuations and workload scheduling opportunities.
+          <p className="mt-1 text-xs text-slate-400">
+            Machine learning forecasting model anticipating grid intensity fluctuations and workload scheduling opportunities.
           </p>
         </div>
-        <div className="flex items-center space-x-2 text-xs font-mono bg-emerald-500/10 text-emerald-400 px-3 py-1.5 rounded-xl border border-emerald-500/30">
-          <ShieldCheck className="w-4 h-4" />
+        <div className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-mono text-emerald-300">
+          <ShieldCheck className="h-4 w-4" />
           <span>Model Accuracy: 94.2%</span>
         </div>
       </div>
 
-      {/* Summary KPI Highlights */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="glass-card p-5 rounded-2xl">
+      <PillNav active={activeSection} onChange={setActiveSection} items={[{ id: 'overview', label: 'Overview' }, { id: 'forecast', label: 'Forecast' }, { id: 'trends', label: 'Trends' }, { id: 'insights', label: 'Insights' }]} />
+
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <GlassSurface className="glass-card-hover p-5">
           <div className="text-xs text-gray-400 font-semibold uppercase">Baseline 7-Day Predicted CO₂</div>
           <div className="text-2xl font-extrabold font-mono text-slate-100 mt-2">
             {summary.predicted7DayTotalBaselineKg} <span className="text-xs font-sans text-gray-400 font-normal">kg CO₂</span>
           </div>
           <div className="text-[11px] text-gray-500 mt-1">Un-optimized standard execution</div>
-        </div>
+        </GlassSurface>
 
-        <div className="glass-card p-5 rounded-2xl border border-emerald-500/30">
-          <div className="text-xs text-emerald-400 font-semibold uppercase">Green AI Optimized 7-Day CO₂</div>
-          <div className="text-2xl font-extrabold font-mono text-emerald-400 mt-2">
-            {summary.predicted7DayTotalOptimizedKg} <span className="text-xs font-sans text-gray-400 font-normal">kg CO₂</span>
+        <GlassSurface className="glass-card-hover border-emerald-500/30 p-5">
+          <div className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-300">Green AI Optimized 7-Day CO₂</div>
+          <div className="mt-2 font-mono text-2xl font-extrabold text-emerald-300">
+            {summary.predicted7DayTotalOptimizedKg} <span className="text-xs font-sans font-normal text-slate-400">kg CO₂</span>
           </div>
-          <div className="text-[11px] text-emerald-400/80 mt-1 font-semibold flex items-center space-x-1">
-            <TrendingDown className="w-3.5 h-3.5" />
+          <div className="mt-1 flex items-center gap-1 text-[11px] font-semibold text-emerald-300">
+            <TrendingDown className="h-3.5 w-3.5" />
             <span>{summary.reductionPercentage}% Emissions Reduction</span>
           </div>
-        </div>
+        </GlassSurface>
 
-        <div className="glass-card p-5 rounded-2xl">
+        <GlassSurface className="glass-card-hover p-5">
           <div className="text-xs text-gray-400 font-semibold uppercase">Potential 7-Day Carbon Avoidance</div>
           <div className="text-2xl font-extrabold font-mono text-cyan-400 mt-2">
             {summary.totalPotentialSavingsKg} <span className="text-xs font-sans text-gray-400 font-normal">kg CO₂</span>
           </div>
           <div className="text-[11px] text-gray-400 mt-1">Achievable via workload shifting & right-sizing</div>
-        </div>
+        </GlassSurface>
       </div>
 
       {/* Predictive Forecast Chart */}
-      <div className="glass-card p-6 rounded-2xl">
+      <GlassSurface className="p-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
           <div>
             <h3 className="text-base font-bold text-slate-100">7-Day Forward Emission Trajectory</h3>
@@ -94,15 +98,17 @@ export default function ForecastView({ forecastData, onNavigateToRecs }) {
               <XAxis dataKey="day" stroke="#6B7280" fontSize={11} tickLine={false} axisLine={false} />
               <YAxis stroke="#6B7280" fontSize={11} tickLine={false} axisLine={false} />
               <Tooltip 
-                contentStyle={{ backgroundColor: '#111827', borderColor: '#374151', borderRadius: '12px', fontSize: '12px' }}
-                itemStyle={{ color: '#F3F4F6' }}
+                cursor={{ stroke: 'rgba(163,230,53,0.22)', strokeWidth: 1, fill: 'rgba(163,230,53,0.04)' }}
+                contentStyle={{ backgroundColor: '#111411', borderColor: '#292D29', borderRadius: '12px', fontSize: '12px' }}
+                itemStyle={{ color: '#F2F4F0' }}
               />
               <Area type="monotone" dataKey="baselineEmissionsKg" name="Baseline (kg CO₂)" stroke="#F43F5E" strokeWidth={2} strokeDasharray="4 4" fillOpacity={1} fill="url(#colorBaseline)" />
               <Area type="monotone" dataKey="predictedOptimizedKg" name="AI Optimized (kg CO₂)" stroke="#10B981" strokeWidth={2.5} fillOpacity={1} fill="url(#colorOptimized)" />
             </AreaChart>
           </ResponsiveContainer>
         </div>
-      </div>
+        <SimpleGraph data={dailyForecast} dataKey="predictedOptimizedKg" className="mt-2" />
+      </GlassSurface>
 
       {/* Day-by-day Breakdown Cards */}
       <div className="glass-card p-6 rounded-2xl space-y-4">
@@ -110,15 +116,15 @@ export default function ForecastView({ forecastData, onNavigateToRecs }) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-3">
           {dailyForecast.map((day, idx) => (
-            <div key={idx} className="p-3.5 rounded-xl bg-dark-900 border border-gray-800 space-y-2">
-              <div className="text-[11px] font-bold text-slate-200 truncate">{day.day}</div>
+            <div key={idx} className="space-y-2 rounded-xl border border-slate-800/80 bg-slate-900/60 p-3.5">
+              <div className="truncate text-[11px] font-bold text-slate-200">{day.day}</div>
               <div className="space-y-1 font-mono text-xs">
-                <div className="text-rose-400 font-semibold">{day.baselineEmissionsKg} kg</div>
-                <div className="text-emerald-400 font-bold">{day.predictedOptimizedKg} kg</div>
+                <div className="font-semibold text-rose-300">{day.baselineEmissionsKg} kg</div>
+                <div className="font-bold text-emerald-300">{day.predictedOptimizedKg} kg</div>
               </div>
-              <div className="pt-2 border-t border-gray-800 text-[10px] text-gray-500 font-mono flex justify-between">
+              <div className="flex items-center justify-between border-t border-slate-800 pt-2 font-mono text-[10px] text-slate-400">
                 <span>Conf:</span>
-                <span className="text-cyan-400">{day.confidenceIntervalPct.toFixed(1)}%</span>
+                <span className="text-cyan-300">{day.confidenceIntervalPct.toFixed(1)}%</span>
               </div>
             </div>
           ))}

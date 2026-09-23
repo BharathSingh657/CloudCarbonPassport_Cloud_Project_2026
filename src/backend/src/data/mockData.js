@@ -49,7 +49,7 @@ export const initialResources = [
     cpuUtilization: 14.2, // Idle resource wasting power!
     memoryUtilization: 22.0,
     storageGB: 1200,
-    uptimeHours: 720,
+    uptimeHours: 900,
     owner: 'Data Eng',
     environment: 'Production',
     tags: { App: 'ETL-Legacy', Tier: 'Batch' }

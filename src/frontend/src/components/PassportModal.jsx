@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { X, ShieldCheck, QrCode, Download, ExternalLink, Leaf, CheckCircle, Clock, Cpu, Zap, Globe, Layers } from 'lucide-react';
+import { X, ShieldCheck, Download, Leaf, Clock, Zap, CheckCircle2 } from 'lucide-react';
+import { ReflectiveCard } from './ReactBits';
 
 export default function PassportModal({ resource, onClose }) {
   const [passportData, setPassportData] = useState(null);
@@ -10,13 +11,11 @@ export default function PassportModal({ resource, onClose }) {
     if (resource) {
       setLoading(true);
       fetch(`/api/resources/${resource.id}/passport`)
-        .then(res => res.json())
-        .then(data => {
-          if (data.success) {
-            setPassportData(data.data);
-          }
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) setPassportData(data.data);
         })
-        .catch(err => console.error('Error fetching passport:', err))
+        .catch((err) => console.error('Error fetching passport:', err))
         .finally(() => setLoading(false));
     }
   }, [resource]);
@@ -28,192 +27,170 @@ export default function PassportModal({ resource, onClose }) {
     const jsonStr = JSON.stringify(passportData, null, 2);
     const blob = new Blob([jsonStr], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `${passportData.passportId}.json`;
-    link.click();
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${passportData.passportId}.json`;
+    a.click();
     URL.revokeObjectURL(url);
-
     setDownloadSuccess(true);
-    setTimeout(() => setDownloadSuccess(false), 3000);
+    setTimeout(() => setDownloadSuccess(false), 2500);
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-dark-900/80 backdrop-blur-md overflow-y-auto">
-      <div className="glass-card w-full max-w-3xl rounded-3xl border border-emerald-500/30 overflow-hidden shadow-2xl relative my-8">
-        {/* Header Ribbon */}
-        <div className="bg-gradient-to-r from-dark-800 via-gray-900 to-dark-800 p-6 border-b border-gray-800 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-emerald-500/20">
-              <Leaf className="w-7 h-7 text-dark-900 stroke-[2.5]" />
-            </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <h3 className="text-lg font-extrabold text-slate-100">Digital Carbon Passport</h3>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
-                  ISO 14064 Standard
-                </span>
+    <div className="passport-overlay fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-md">
+      <div className="passport-theme glass-modal reflective-card relative my-6 w-full max-w-4xl overflow-hidden rounded-[32px] border border-emerald-500/20 bg-slate-950/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)]">
+        <div className="passport-header border-b border-slate-800/80 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 p-6">
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 to-cyan-400 shadow-lg shadow-emerald-500/20">
+                <Leaf className="h-6 w-6 text-slate-950" />
               </div>
-              <p className="text-xs text-gray-400">Verifiable Cloud Sustainability Certificate</p>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h3 className="text-lg font-semibold text-slate-100">Digital Carbon Passport</h3>
+                  <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-[9px] font-medium uppercase tracking-[0.16em] text-emerald-300">
+                    ISO 14064
+                  </span>
+                </div>
+                <p className="text-xs text-slate-400">Verifiable cloud sustainability identity</p>
+              </div>
             </div>
+
+            <button
+              type="button"
+              onClick={onClose}
+              className="rounded-xl border border-slate-700 bg-slate-900/80 p-2 text-slate-300 transition hover:border-slate-600 hover:text-white"
+            >
+              <X className="h-5 w-5" />
+            </button>
           </div>
-          
-          <button
-            onClick={onClose}
-            className="p-2 rounded-xl bg-dark-800 hover:bg-gray-800 text-gray-400 hover:text-white transition border border-gray-700"
-          >
-            <X className="w-5 h-5" />
-          </button>
         </div>
 
-        {/* Modal Body */}
         {loading || !passportData ? (
-          <div className="p-12 text-center text-gray-400 space-y-3">
-            <div className="w-8 h-8 mx-auto border-2 border-emerald-400 border-t-transparent rounded-full animate-spin" />
-            <p className="text-xs">Cryptographically generating Digital Carbon Passport...</p>
+          <div className="flex min-h-[220px] items-center justify-center p-12 text-center">
+            <div className="flex flex-col items-center gap-3 text-slate-300">
+              <div className="h-10 w-10 animate-spin rounded-full border-2 border-emerald-400 border-t-transparent" />
+              <div className="text-sm font-medium">Generating passport…</div>
+            </div>
           </div>
         ) : (
-          <div className="p-6 space-y-6 max-h-[75vh] overflow-y-auto">
-            {/* Passport Identity Header */}
-            <div className="p-5 rounded-2xl bg-dark-900 border border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="space-y-1 text-center md:text-left">
-                <span className="text-[10px] uppercase font-mono tracking-widest text-emerald-400">Passport Serial ID</span>
-                <div className="text-lg font-extrabold font-mono text-slate-100 tracking-wide">
-                  {passportData.passportId}
+          <div className="max-h-[75vh] overflow-y-auto p-5 sm:p-6">
+            <ReflectiveCard className="p-5 sm:p-6">
+              <div className="mb-5 flex flex-col gap-4 border-b border-slate-800/80 pb-5 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-[0.22em] text-emerald-300">Passport Serial</div>
+                  <div className="mt-1 font-mono text-xl font-semibold text-slate-100">{passportData.passportId}</div>
                 </div>
-                <div className="text-xs text-gray-400 flex items-center justify-center md:justify-start space-x-2 pt-1">
-                  <span>Resource: <strong className="text-slate-200">{passportData.resourceName}</strong></span>
-                  <span>•</span>
-                  <span>Type: <span className="text-cyan-400 font-mono">{passportData.instanceType}</span></span>
-                </div>
-              </div>
 
-              {/* QR Code & Verification Stamp */}
-              <div className="flex items-center space-x-4 bg-dark-800 p-3 rounded-xl border border-gray-700">
-                <div className="w-14 h-14 bg-white p-1 rounded-lg flex items-center justify-center shadow-md">
-                  {/* SVG Mock QR Code */}
-                  <svg className="w-full h-full text-dark-900" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm8-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm13-2h3v2h-3v-2zm-3 3h2v2h-2v-2zm3 3h3v2h-3v-2zm-3-3h3v2h-3v-2z" />
-                  </svg>
-                </div>
-                <div className="text-left">
-                  <div className="flex items-center space-x-1 text-emerald-400 text-xs font-bold">
-                    <ShieldCheck className="w-4 h-4" />
-                    <span>VERIFIED PASSPORT</span>
+                <div className="flex items-center gap-3 rounded-2xl border border-slate-700 bg-slate-950/70 px-3 py-2">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white">
+                    <div className="grid grid-cols-4 gap-[2px] p-1">
+                      {Array.from({ length: 16 }).map((_, i) => (
+                        <span key={i} className={`h-1.5 w-1.5 rounded-sm ${i % 2 === 0 ? 'bg-slate-950' : 'bg-slate-950/30'}`} />
+                      ))}
+                    </div>
                   </div>
-                  <div className="text-[10px] text-gray-400 font-mono mt-0.5">Signed by Green AI Engine</div>
-                  <div className="text-[10px] text-gray-500 font-mono">{passportData.issueDate.split('T')[0]}</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Core Metrics & GHG Breakdown */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-4 rounded-xl bg-dark-900 border border-gray-800 text-center">
-                <div className="text-[11px] text-gray-400 uppercase font-mono">Sustainability Score</div>
-                <div className="text-3xl font-extrabold font-mono text-emerald-400 mt-1">
-                  {passportData.sustainabilityScore} <span className="text-xs text-gray-400 font-sans">/ 100</span>
-                </div>
-                <div className="mt-1 text-xs font-semibold text-slate-300">
-                  Rating: <span className="text-emerald-400">{passportData.sustainabilityRating}</span>
-                </div>
-              </div>
-
-              <div className="p-4 rounded-xl bg-dark-900 border border-gray-800 text-center">
-                <div className="text-[11px] text-gray-400 uppercase font-mono">Total Carbon Footprint</div>
-                <div className="text-3xl font-extrabold font-mono text-cyan-400 mt-1">
-                  {passportData.metrics.carbonKgCO2} <span className="text-xs text-gray-400 font-sans">kg CO₂</span>
-                </div>
-                <div className="mt-1 text-xs text-gray-400 font-mono">
-                  Intensity: {passportData.metrics.carbonIntensity} g/kWh
-                </div>
-              </div>
-
-              <div className="p-4 rounded-xl bg-dark-900 border border-gray-800 text-center">
-                <div className="text-[11px] text-gray-400 uppercase font-mono">Grid Renewable Ratio</div>
-                <div className="text-3xl font-extrabold font-mono text-teal-400 mt-1">
-                  {passportData.metrics.renewablePct}%
-                </div>
-                <div className="mt-1 text-xs text-gray-400 truncate">
-                  Grid: {passportData.gridProvider}
-                </div>
-              </div>
-            </div>
-
-            {/* GHG Scope 2 & 3 Detail */}
-            <div className="p-4 rounded-2xl bg-dark-900 border border-gray-800 space-y-3">
-              <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider flex items-center space-x-2">
-                <Zap className="w-4 h-4 text-amber-400" />
-                <span>GHG Protocol Carbon Breakdown (Scope 2 & Scope 3)</span>
-              </h4>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                <div className="p-3 rounded-xl bg-dark-800 border border-gray-800">
-                  <div className="text-gray-400 font-medium">Scope 2 (Electricity Grid Emissions)</div>
-                  <div className="text-base font-bold font-mono text-slate-100 mt-1">
-                    {passportData.ghgProtocol.scope2} kg CO₂eq
+                  <div>
+                    <div className="flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-emerald-300">
+                      <ShieldCheck className="h-4 w-4" /> Verified
+                    </div>
+                    <div className="mt-1 text-[10px] text-slate-400">Signed by Green AI Engine</div>
                   </div>
-                  <div className="text-[11px] text-gray-500 mt-0.5">Purchased grid power for compute runtime</div>
-                </div>
-
-                <div className="p-3 rounded-xl bg-dark-800 border border-gray-800">
-                  <div className="text-gray-400 font-medium">Scope 3 (Embodied Hardware Mfg)</div>
-                  <div className="text-base font-bold font-mono text-slate-100 mt-1">
-                    {passportData.ghgProtocol.scope3} kg CO₂eq
-                  </div>
-                  <div className="text-[11px] text-gray-500 mt-0.5">Server manufacturing & datacenter infrastructure amortized</div>
                 </div>
               </div>
-            </div>
 
-            {/* Lifecycle Audit Trail Timeline */}
-            <div className="p-4 rounded-2xl bg-dark-900 border border-gray-800 space-y-3">
-              <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider flex items-center space-x-2">
-                <Clock className="w-4 h-4 text-emerald-400" />
-                <span>Lifecycle Carbon Passport Audit History</span>
-              </h4>
+              <div className="grid gap-4 md:grid-cols-3">
+                <div className="rounded-2xl border border-slate-800/80 bg-slate-900/60 p-4">
+                  <div className="text-[10px] uppercase tracking-[0.18em] text-slate-400">Sustainability Score</div>
+                  <div className="mt-3 font-mono text-3xl font-semibold text-emerald-300">{passportData.sustainabilityScore}</div>
+                  <div className="mt-2 text-xs text-slate-300">Rating: {passportData.sustainabilityRating}</div>
+                </div>
 
-              <div className="space-y-2">
-                {passportData.auditTrail.map((audit, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-3 rounded-xl bg-dark-800 border border-gray-800 text-xs">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 rounded-full bg-emerald-400" />
+                <div className="rounded-2xl border border-slate-800/80 bg-slate-900/60 p-4">
+                  <div className="text-[10px] uppercase tracking-[0.18em] text-slate-400">Carbon Footprint</div>
+                  <div className="mt-3 font-mono text-3xl font-semibold text-cyan-300">{passportData.metrics.carbonKgCO2}</div>
+                  <div className="mt-2 text-xs text-slate-300">kg CO₂eq</div>
+                </div>
+
+                <div className="rounded-2xl border border-slate-800/80 bg-slate-900/60 p-4">
+                  <div className="text-[10px] uppercase tracking-[0.18em] text-slate-400">Renewable Energy</div>
+                  <div className="mt-3 font-mono text-3xl font-semibold text-emerald-300">{passportData.metrics.renewablePct}%</div>
+                  <div className="mt-2 text-xs text-slate-300">Grid: {passportData.gridProvider}</div>
+                </div>
+              </div>
+
+              <div className="mt-5 grid gap-4 lg:grid-cols-2">
+                <div className="rounded-2xl border border-slate-800/80 bg-slate-900/60 p-4">
+                  <div className="mb-3 text-[10px] uppercase tracking-[0.18em] text-slate-400">Resource Identity</div>
+                  <div className="space-y-3 text-sm text-slate-200">
+                    <div className="flex justify-between gap-3"><span>Resource ID</span><span className="font-mono text-slate-100">{passportData.resourceId}</span></div>
+                    <div className="flex justify-between gap-3"><span>Service</span><span className="font-mono text-slate-100">{passportData.service}</span></div>
+                    <div className="flex justify-between gap-3"><span>Region</span><span className="font-mono text-slate-100">{passportData.region}</span></div>
+                    <div className="flex justify-between gap-3"><span>Instance Type</span><span className="font-mono text-slate-100">{passportData.instanceType}</span></div>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-slate-800/80 bg-slate-900/60 p-4">
+                  <div className="mb-3 text-[10px] uppercase tracking-[0.18em] text-slate-400">Operational Impact</div>
+                  <div className="space-y-3 text-sm text-slate-200">
+                    <div className="flex justify-between gap-3"><span>Power</span><span className="font-mono text-slate-100">{passportData.metrics.powerWatts} W</span></div>
+                    <div className="flex justify-between gap-3"><span>Energy</span><span className="font-mono text-slate-100">{passportData.metrics.totalKWh} kWh</span></div>
+                    <div className="flex justify-between gap-3"><span>Carbon Intensity</span><span className="font-mono text-slate-100">{passportData.metrics.carbonIntensity} gCO₂/kWh</span></div>
+                    <div className="flex justify-between gap-3"><span>AI Status</span><span className="inline-flex items-center gap-1.5 text-emerald-300"><CheckCircle2 className="h-3.5 w-3.5" /> OPTIMIZED</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-2xl border border-slate-800/80 bg-slate-900/60 p-4">
+                <div className="mb-3 flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-slate-400">
+                  <Zap className="h-4 w-4 text-amber-300" /> GHG Protocol Breakdown
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-xl border border-slate-800/80 bg-slate-950/60 p-3">
+                    <div className="text-xs text-slate-400">Scope 2</div>
+                    <div className="mt-1 font-mono text-lg font-semibold text-slate-100">{passportData.ghgProtocol.scope2} kg</div>
+                  </div>
+                  <div className="rounded-xl border border-slate-800/80 bg-slate-950/60 p-3">
+                    <div className="text-xs text-slate-400">Scope 3</div>
+                    <div className="mt-1 font-mono text-lg font-semibold text-slate-100">{passportData.ghgProtocol.scope3} kg</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-2xl border border-slate-800/80 bg-slate-900/60 p-4">
+                <div className="mb-3 flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-slate-400">
+                  <Clock className="h-4 w-4 text-emerald-300" /> Audit Trail
+                </div>
+                <div className="space-y-2 text-sm text-slate-200">
+                  {passportData.auditTrail.map((item, index) => (
+                    <div key={index} className="flex justify-between gap-4 rounded-xl border border-slate-800/80 bg-slate-950/60 px-3 py-2">
                       <div>
-                        <div className="font-semibold text-slate-200">{audit.event}</div>
-                        <div className="text-[10px] text-gray-500 font-mono">{audit.timestamp}</div>
+                        <div className="font-medium text-slate-100">{item.event}</div>
+                        <div className="mt-1 font-mono text-[10px] text-slate-400">{item.timestamp}</div>
                       </div>
+                      <div className="text-right font-mono text-emerald-300">{item.carbonRateKg} kg</div>
                     </div>
-                    <div className="text-right font-mono">
-                      <div className="text-emerald-400 font-bold">{audit.carbonRateKg} kg CO₂</div>
-                      <div className="text-[10px] text-gray-400">Score: {audit.score}/100</div>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* Cryptographic Digital Signature Footer */}
-            <div className="p-3.5 rounded-xl bg-dark-900 border border-gray-800 font-mono text-[10px] text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-2">
-              <span className="truncate max-w-md">SHA256 Signature: {passportData.verification.digitalSignature}</span>
-              <span className="text-emerald-400 font-semibold">Status: ISO-Compliant Valid</span>
-            </div>
+            </ReflectiveCard>
           </div>
         )}
 
-        {/* Modal Actions */}
-        <div className="p-4 bg-dark-800 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="passport-footer flex flex-col gap-3 border-t border-slate-800/80 bg-slate-950/90 p-4 sm:flex-row sm:items-center sm:justify-between">
           <button
+            type="button"
             onClick={handleDownloadJson}
-            disabled={loading}
-            className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-dark-900 text-xs font-bold transition flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-4 py-2.5 text-xs font-semibold text-slate-950 transition hover:brightness-110"
           >
-            <Download className="w-4 h-4" />
-            <span>{downloadSuccess ? 'Passport Downloaded!' : 'Export Passport (JSON)'}</span>
+            <Download className="h-4 w-4" />
+            {downloadSuccess ? 'Downloaded' : 'Export JSON'}
           </button>
 
           <button
+            type="button"
             onClick={onClose}
-            className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-dark-900 hover:bg-gray-900 text-gray-300 text-xs font-semibold border border-gray-700 transition"
+            className="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-2.5 text-xs font-semibold text-slate-200 transition hover:border-slate-600 hover:text-white"
           >
             Close Passport
           </button>
