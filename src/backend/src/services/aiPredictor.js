@@ -5,15 +5,30 @@ import { REGION_CARBON_INTENSITY } from '../data/mockData.js';
  */
 export function generate7DayForecast(resourcesWithMetrics) {
   const days = ['Day 1 (Today)', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'];
-  const todayCarbon = resourcesWithMetrics.reduce((acc, r) => acc + r.metrics.carbonKgCO2, 0) / 30; // Daily average
+  const dailyResourceCarbon = resourcesWithMetrics.reduce((acc, resource) => acc + resource.metrics.carbonKgCO2, 0) / 30;
+  const optimizationOpportunity = resourcesWithMetrics.reduce((acc, resource) => {
+    const carbon = resource.metrics.carbonKgCO2;
+    let reduction = 0;
+
+    if (resource.service === 'Amazon EC2' && resource.cpuUtilization < 20) {
+      reduction = 0.65;
+    } else if ((resource.region === 'ap-south-1' || resource.region === 'us-east-1') && carbon > 30) {
+      reduction = 0.25;
+    } else if (resource.service === 'Amazon S3' && resource.storageGB > 50000 && resource.region !== 'eu-north-1') {
+      reduction = 0.45;
+    }
+
+    return acc + (carbon * reduction) / 30;
+  }, 0);
+  const optimizedDailyCarbon = Math.max(0, dailyResourceCarbon - optimizationOpportunity);
 
   // Simulated AI Time-Series forecasting model (combines seasonality, grid carbon forecast & load predictions)
   const multipliers = [1.0, 1.04, 0.98, 1.12, 1.08, 0.85, 0.80]; // Weekday vs weekend load drops
   const gridVariance = [1.0, 0.96, 1.02, 0.94, 0.99, 0.91, 0.88]; // Expected green grid energy shift
 
   const forecast = days.map((dayName, idx) => {
-    const baselineDailyKg = parseFloat((todayCarbon * multipliers[idx]).toFixed(2));
-    const optimizedDailyKg = parseFloat((baselineDailyKg * gridVariance[idx] * 0.74).toFixed(2)); // With Green AI scheduling
+    const baselineDailyKg = parseFloat((dailyResourceCarbon * multipliers[idx]).toFixed(2));
+    const optimizedDailyKg = parseFloat((optimizedDailyCarbon * gridVariance[idx]).toFixed(2));
     
     return {
       day: dayName,
@@ -29,7 +44,7 @@ export function generate7DayForecast(resourcesWithMetrics) {
       predicted7DayTotalBaselineKg: parseFloat(forecast.reduce((a, b) => a + b.baselineEmissionsKg, 0).toFixed(2)),
       predicted7DayTotalOptimizedKg: parseFloat(forecast.reduce((a, b) => a + b.predictedOptimizedKg, 0).toFixed(2)),
       totalPotentialSavingsKg: parseFloat(forecast.reduce((a, b) => a + b.potentialDailySavingsKg, 0).toFixed(2)),
-      reductionPercentage: 26.0
+      reductionPercentage: parseFloat((((forecast.reduce((total, day) => total + day.potentialDailySavingsKg, 0)) / (forecast.reduce((total, day) => total + day.baselineEmissionsKg, 0) || 1)) * 100).toFixed(1))
     },
     dailyForecast: forecast
   };

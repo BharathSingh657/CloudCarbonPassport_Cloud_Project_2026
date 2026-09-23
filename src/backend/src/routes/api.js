@@ -6,6 +6,13 @@ import { generate7DayForecast, generateRecommendations } from '../services/aiPre
 
 const router = express.Router();
 
+router.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  next();
+});
+
 // In-memory state of cloud resources
 let currentResources = [...initialResources];
 let appliedRecommendations = new Set();
@@ -13,6 +20,24 @@ let appliedRecommendations = new Set();
 // Utility helper to get resources with carbon metrics applied
 function getProcessedResources() {
   return currentResources.map(res => calculateResourceCarbon(res));
+}
+
+function buildCurrentSnapshot() {
+  const processed = getProcessedResources();
+  const aggregate = calculateAggregateMetrics(processed);
+  const forecast = generate7DayForecast(processed);
+  const recommendations = generateRecommendations(processed).map(recommendation => ({
+    ...recommendation,
+    applied: appliedRecommendations.has(recommendation.id)
+  }));
+
+  return {
+    timestamp: new Date().toISOString(),
+    processed,
+    aggregate,
+    forecast,
+    recommendations
+  };
 }
 
 // 1. Dashboard Global KPIs
@@ -177,17 +202,25 @@ router.post('/recommendations/:id/apply', (req, res) => {
         return { ...r, region: rec.targetRegion, status: 'Optimal' };
       }
       if (rec.type.includes('Storage Lifecycle')) {
-        return { ...r, status: 'Optimal' };
+        return { ...r, status: 'Optimal', tags: { ...r.tags, StorageClass: 'Glacier-Deep' } };
       }
     }
     return r;
   });
 
+  const snapshot = buildCurrentSnapshot();
   res.json({
     success: true,
     message: `Optimization applied successfully to ${rec.resourceName}!`,
     appliedRecommendationId: id,
-    updatedResource: currentResources.find(r => r.id === rec.resourceId)
+    updatedResource: snapshot.processed.find(r => r.id === rec.resourceId),
+    timestamp: snapshot.timestamp,
+    data: {
+      stats: snapshot.aggregate,
+      resources: snapshot.processed,
+      forecast: snapshot.forecast,
+      recommendations: snapshot.recommendations
+    }
   });
 });
 
