@@ -1,5 +1,3 @@
-import { REGION_CARBON_INTENSITY } from '../data/mockData.js';
-
 /**
  * Generates 7-day AI carbon emission predictions for aggregate or specific resources.
  */
@@ -60,17 +58,18 @@ export function generateRecommendations(resourcesWithMetrics) {
     const m = res.metrics;
 
     // 1. Idle Resource Shutdown / Right-sizing
-    if (res.cpuUtilization < 20 && res.service === 'Amazon EC2') {
+    if ((res.cpuUtilization ?? 50) < 20 && res.service === 'Amazon EC2') {
       recs.push({
         id: `rec-idle-${res.id}`,
         resourceId: res.id,
         resourceName: res.name,
         service: res.service,
+        source: res.source || 'sample',
         type: 'Resource Right-Sizing / Idle Reduction',
         severity: 'HIGH',
         impactScore: 92,
         title: `Right-size idle instance ${res.name}`,
-        description: `Resource CPU utilization is only ${res.cpuUtilization}%. Downgrading from ${res.instanceType} to t3.medium or turning off during off-peak will save significant energy.`,
+        description: `Resource CPU utilization is only ${res.cpuUtilization ?? 'unknown'}%. Downgrading from ${res.instanceType} to t3.medium or turning off during off-peak will save significant energy.`,
         action: `Downgrade instance type to t3.medium or apply Auto-Scaling schedule`,
         estimatedMonthlyCarbonSavingsKg: parseFloat((m.carbonKgCO2 * 0.65).toFixed(2)),
         estimatedMonthlyCostSavingsUsd: 145,
@@ -91,6 +90,7 @@ export function generateRecommendations(resourcesWithMetrics) {
         resourceId: res.id,
         resourceName: res.name,
         service: res.service,
+        source: res.source || 'sample',
         type: 'Carbon-Aware Region Shift',
         severity: 'MEDIUM',
         impactScore: 84,
@@ -111,6 +111,7 @@ export function generateRecommendations(resourcesWithMetrics) {
         resourceId: res.id,
         resourceName: res.name,
         service: res.service,
+        source: res.source || 'sample',
         type: 'Green Archival Storage Lifecycle',
         severity: 'LOW',
         impactScore: 70,
