@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ShieldCheck, Download, Leaf, Clock, Zap, CheckCircle2 } from 'lucide-react';
+import { X, ShieldCheck, Download, Leaf, Clock, Zap, CheckCircle2, FileText } from 'lucide-react';
 import { ReflectiveCard } from './ReactBits';
 
 export default function PassportModal({ resource, onClose }) {
@@ -34,6 +34,160 @@ export default function PassportModal({ resource, onClose }) {
     URL.revokeObjectURL(url);
     setDownloadSuccess(true);
     setTimeout(() => setDownloadSuccess(false), 2500);
+  };
+
+  const handleExportPdf = () => {
+    if (!passportData) return;
+    const printWindow = window.open('', '_blank');
+    if (!printWindow) return;
+
+    const htmlContent = `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>${passportData.passportId}_ISO14064_Passport.pdf</title>
+          <style>
+            @page { size: A4; margin: 12mm; }
+            body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #0f172a; background: #ffffff; margin: 0; padding: 20px; }
+            .certificate-container { border: 3px double #059669; padding: 24px; border-radius: 12px; max-width: 800px; margin: 0 auto; background: #fafdfb; position: relative; }
+            .watermark { position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%) rotate(-30deg); font-size: 60px; font-weight: 900; color: rgba(16, 185, 129, 0.06); letter-spacing: 4px; pointer-events: none; text-transform: uppercase; white-space: nowrap; }
+            .header-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #10b981; padding-bottom: 16px; margin-bottom: 20px; }
+            .logo-title { font-size: 22px; font-weight: 800; color: #047857; letter-spacing: 0.5px; }
+            .subtitle { font-size: 12px; color: #475569; margin-top: 4px; font-weight: 500; }
+            .badge-iso { background: #d1fae5; color: #047857; padding: 4px 12px; border-radius: 16px; font-size: 11px; font-weight: 700; border: 1px solid #6ee7b7; display: inline-block; }
+            .serial-box { background: #f1f5f9; border: 1px solid #cbd5e1; padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+            .serial-label { font-size: 10px; text-transform: uppercase; font-weight: 700; color: #64748b; letter-spacing: 1px; }
+            .serial-value { font-family: monospace; font-size: 16px; font-weight: 700; color: #0f172a; margin-top: 2px; }
+            .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+            .kpi-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 14px; border-radius: 8px; text-align: center; }
+            .kpi-title { font-size: 10px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+            .kpi-val { font-size: 22px; font-weight: 800; color: #047857; font-family: monospace; margin-top: 4px; }
+            .kpi-sub { font-size: 11px; color: #475569; margin-top: 2px; }
+            .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+            .section-box { background: #ffffff; border: 1px solid #e2e8f0; padding: 14px; border-radius: 8px; }
+            .section-title { font-size: 11px; font-weight: 700; color: #047857; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; border-bottom: 1px solid #f1f5f9; padding-bottom: 6px; }
+            .data-row { display: flex; justify-content: space-between; font-size: 12px; padding: 5px 0; border-bottom: 1px dashed #f1f5f9; }
+            .data-row:last-child { border-bottom: none; }
+            .data-label { color: #64748b; }
+            .data-val { font-family: monospace; font-weight: 600; color: #0f172a; }
+            .audit-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 11px; }
+            .audit-table th { background: #f8fafc; text-align: left; padding: 6px 8px; font-size: 10px; color: #64748b; text-transform: uppercase; border-bottom: 1px solid #e2e8f0; }
+            .audit-table td { padding: 6px 8px; border-bottom: 1px solid #f1f5f9; font-family: monospace; }
+            .footer-signature { margin-top: 24px; padding-top: 16px; border-top: 2px solid #e2e8f0; display: flex; justify-content: space-between; align-items: flex-end; }
+            .stamp-box { border: 2px dashed #059669; padding: 8px 16px; border-radius: 8px; color: #047857; font-size: 11px; font-weight: 700; text-align: center; background: #ecfdf5; }
+            .sig-line { text-align: right; font-size: 11px; color: #64748b; }
+            .sig-line-bar { width: 160px; border-bottom: 1px solid #94a3b8; margin-bottom: 4px; display: inline-block; }
+          </style>
+        </head>
+        <body>
+          <div class="certificate-container">
+            <div class="watermark">ISO 14064 VERIFIED</div>
+            
+            <div class="header-bar">
+              <div>
+                <div class="logo-title">🌱 Digital Carbon Passport</div>
+                <div class="subtitle">Verifiable Cloud Infrastructure Sustainability Certificate</div>
+              </div>
+              <div class="badge-iso">ISO 14064 & GHG Protocol Certified</div>
+            </div>
+
+            <div class="serial-box">
+              <div>
+                <div class="serial-label">Passport Serial Identity</div>
+                <div class="serial-value">${passportData.passportId}</div>
+              </div>
+              <div style="text-align: right;">
+                <div class="serial-label">Issued Timestamp</div>
+                <div class="serial-value" style="font-size: 12px;">${passportData.issuedAt || new Date().toISOString()}</div>
+              </div>
+            </div>
+
+            <div class="grid-3">
+              <div class="kpi-card">
+                <div class="kpi-title">Sustainability Score</div>
+                <div class="kpi-val">${passportData.sustainabilityScore}/100</div>
+                <div class="kpi-sub">Rating: ${passportData.sustainabilityRating}</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-title">Carbon Footprint</div>
+                <div class="kpi-val">${passportData.metrics.carbonKgCO2} kg</div>
+                <div class="kpi-sub">CO₂ Equivalent</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-title">Renewable Energy</div>
+                <div class="kpi-val">${passportData.metrics.renewablePct}%</div>
+                <div class="kpi-sub">Grid: ${passportData.gridProvider}</div>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="section-box">
+                <div class="section-title">Resource Profile</div>
+                <div class="data-row"><span class="data-label">Resource ID</span><span class="data-val">${passportData.resourceId}</span></div>
+                <div class="data-row"><span class="data-label">Cloud Service</span><span class="data-val">${passportData.service}</span></div>
+                <div class="data-row"><span class="data-label">AWS Region</span><span class="data-val">${passportData.region}</span></div>
+                <div class="data-row"><span class="data-label">Instance Type</span><span class="data-val">${passportData.instanceType}</span></div>
+              </div>
+
+              <div class="section-box">
+                <div class="section-title">Telemetry & Energy</div>
+                <div class="data-row"><span class="data-label">Power Draw</span><span class="data-val">${passportData.metrics.powerWatts} W</span></div>
+                <div class="data-row"><span class="data-label">Energy Consumed</span><span class="data-val">${passportData.metrics.totalKWh} kWh</span></div>
+                <div class="data-row"><span class="data-label">Grid Intensity</span><span class="data-val">${passportData.metrics.carbonIntensity} gCO₂/kWh</span></div>
+                <div class="data-row"><span class="data-label">PUE Overhead</span><span class="data-val">${passportData.metrics.pue || 1.18}</span></div>
+              </div>
+            </div>
+
+            <div class="section-box" style="margin-bottom: 20px;">
+              <div class="section-title">GHG Protocol Scope 2 & 3 Breakdown</div>
+              <div class="grid-2" style="margin-bottom: 0;">
+                <div class="data-row"><span class="data-label">Scope 2 (Grid Electricity Emissions)</span><span class="data-val">${passportData.ghgProtocol.scope2} kg CO₂</span></div>
+                <div class="data-row"><span class="data-label">Scope 3 (Embodied Hardware Mfg & Lifecycle)</span><span class="data-val">${passportData.ghgProtocol.scope3} kg CO₂</span></div>
+              </div>
+            </div>
+
+            <div class="section-box">
+              <div class="section-title">Audit Log Trail</div>
+              <table class="audit-table">
+                <thead>
+                  <tr>
+                    <th>Event</th>
+                    <th>Timestamp</th>
+                    <th style="text-align: right;">Emissions Rate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${passportData.auditTrail.map(item => `
+                    <tr>
+                      <td>${item.event}</td>
+                      <td>${item.timestamp}</td>
+                      <td style="text-align: right;">${item.carbonRateKg} kg</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+
+            <div class="footer-signature">
+              <div class="stamp-box">
+                ✓ GREEN AI VERIFIED CERTIFICATE<br/>
+                <span style="font-size: 9px; font-weight: normal;">ISO 14064 Compliance Authenticated</span>
+              </div>
+              <div class="sig-line">
+                <div class="sig-line-bar"></div><br/>
+                Authorized Sustainability Officer
+              </div>
+            </div>
+          </div>
+        </body>
+      </html>
+    `;
+
+    printWindow.document.write(htmlContent);
+    printWindow.document.close();
+    setTimeout(() => {
+      printWindow.print();
+    }, 400);
   };
 
   return (
@@ -178,14 +332,25 @@ export default function PassportModal({ resource, onClose }) {
         )}
 
         <div className="passport-footer flex flex-col gap-3 border-t border-slate-800/80 bg-slate-950/90 p-4 sm:flex-row sm:items-center sm:justify-between">
-          <button
-            type="button"
-            onClick={handleDownloadJson}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-4 py-2.5 text-xs font-semibold text-slate-950 transition hover:brightness-110"
-          >
-            <Download className="h-4 w-4" />
-            {downloadSuccess ? 'Downloaded' : 'Export JSON'}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={handleDownloadJson}
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-4 py-2.5 text-xs font-semibold text-slate-950 transition hover:brightness-110"
+            >
+              <Download className="h-4 w-4" />
+              {downloadSuccess ? 'Downloaded' : 'Export JSON'}
+            </button>
+
+            <button
+              type="button"
+              onClick={handleExportPdf}
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-500/40 bg-emerald-500/10 px-4 py-2.5 text-xs font-semibold text-emerald-300 transition hover:bg-emerald-500/20"
+            >
+              <FileText className="h-4 w-4" />
+              Export PDF
+            </button>
+          </div>
 
           <button
             type="button"
@@ -199,3 +364,4 @@ export default function PassportModal({ resource, onClose }) {
     </div>
   );
 }
+
