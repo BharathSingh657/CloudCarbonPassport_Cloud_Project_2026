@@ -9,14 +9,18 @@ import {
   BellRing,
   Settings,
   Cloud,
-  FileText
+  CloudCog,
+  FileText,
+  Database
 } from 'lucide-react';
 import { LineSidebar } from './ReactBits';
 
 export default function Sidebar({ activeTab, setActiveTab, recommendationsCount }) {
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, badge: null },
-    { id: 'resources', label: 'Cloud Resources', icon: Server, badge: 'Live' },
+    { id: 'pipeline', label: 'Data Pipeline', icon: Database, badge: 'ETL' },
+    { id: 'aws', label: 'AWS Infrastructure', icon: CloudCog, badge: 'Live' },
+    { id: 'resources', label: 'Cloud Resources', icon: Server, badge: 'DB' },
     { id: 'predictions', label: 'AI Predictions', icon: TrendingDown, badge: 'AI' },
     { id: 'recommendations', label: 'Recommendations', icon: Sparkles, badge: recommendationsCount > 0 ? recommendationsCount : null },
     { id: 'analytics', label: 'Carbon Analytics', icon: BarChart3, badge: null },
@@ -76,11 +80,11 @@ export default function Sidebar({ activeTab, setActiveTab, recommendationsCount 
               AWS Infrastructure
             </div>
             <p className="text-[11px] leading-relaxed text-slate-400">
-              Modular CloudWatch, S3, RDS, and AI optimization connectors ready for live integration.
+              Seven-layer AWS architecture with Cognito, API Gateway, EC2, Lambda, RDS, S3, SageMaker, QuickSight, SNS, and CloudWatch.
             </p>
             <div className="mt-3 flex items-center justify-between border-t border-slate-800/80 pt-2 text-[10px] text-slate-400">
-              <span>Adapter Mode</span>
-              <span className="font-medium text-emerald-300">Simulated MVP</span>
+              <span>Reference Architecture</span>
+              <span className="font-medium text-cyan-300">Review aligned</span>
             </div>
           </div>
         </div>
@@ -88,14 +92,14 @@ export default function Sidebar({ activeTab, setActiveTab, recommendationsCount 
         <div className="sidebar-compliance mt-4 rounded-2xl p-3 text-[11px] text-slate-400">
           <div className="mb-2 flex items-center gap-2 text-slate-200">
             <ShieldCheck className="h-4 w-4 text-emerald-400" />
-            GHG Compliance
+            Methodology assumptions
           </div>
           <div className="flex items-center justify-between gap-4">
-            <span>Protocol</span>
-            <span className="font-mono text-slate-200">Scope 2 & 3</span>
+            <span>Emissions scope</span>
+            <span className="font-mono text-slate-200">Estimated</span>
           </div>
           <div className="mt-2 flex items-center justify-between gap-4">
-            <span>PUE Target</span>
+            <span>Assumed PUE</span>
             <span className="font-mono text-emerald-300">1.18</span>
           </div>
         </div>
