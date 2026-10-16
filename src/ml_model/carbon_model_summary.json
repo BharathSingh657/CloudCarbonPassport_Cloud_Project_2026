@@ -1,0 +1,15 @@
+{
+  "dataset_path": "C:\\Users\\bhara\\Desktop\\CLOUD\\CloudCarbonPassport_Cloud_Project_2026\\dataset\\raw\\cloud_carbon_telemetry_dataset.csv",
+  "rows": 12,
+  "target": "carbon_emissions_kg_co2",
+  "train_rows": 9,
+  "test_rows": 3,
+  "metrics": {
+    "MAE_kg_co2": 34.5836,
+    "R2": -0.2048
+  },
+  "notes": [
+    "This is a lightweight proof-of-concept carbon prediction model using actual infrastructure telemetry.",
+    "It is designed to demonstrate data-based analysis rather than a production AWS forecasting pipeline."
+  ]
+}

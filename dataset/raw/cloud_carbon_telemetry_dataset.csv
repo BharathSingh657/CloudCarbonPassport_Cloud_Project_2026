@@ -1,0 +1,13 @@
+resource_id,resource_name,service,instance_type,region,status,cpu_utilization_pct,memory_utilization_pct,storage_gb,uptime_hours,power_watts,total_kwh,carbon_intensity_gco2_kwh,carbon_emissions_kg_co2,scope2_emissions_kg,scope3_emissions_kg,renewable_pct,sustainability_score,sustainability_rating
+res-ec2-prod-api-01,Prod API Gateway Cluster,Amazon EC2,c6i.4xlarge,us-east-1,Active,78.4,65.2,500,720,318.44,270.55,378,102.27,83.86,18.41,22.0,82,A
+res-ec2-legacy-batch-02,Legacy Analytics Ingestion,Amazon EC2,t3.2xlarge,ap-south-1,Warning,14.2,22.0,1200,900,47.94,50.91,708,36.05,29.56,6.49,18.0,38,D (Inefficient)
+res-rds-user-db-01,Primary PostgreSQL DB,Amazon RDS,db.r6g.xlarge,us-west-2,Optimal,42.1,71.5,2500,720,66.30,56.33,115,6.48,5.31,1.17,78.0,91,A+
+res-rds-staging-db-02,Staging PostgreSQL DB,Amazon RDS,db.t4g.medium,us-east-1,Active,18.5,35.0,250,720,13.99,11.89,378,4.49,3.68,0.81,22.0,52,C
+res-s3-analytics-logs-01,Analytics Cold Data Lake,Amazon S3,s3-standard,us-east-1,Optimal,5.0,5.0,185000,720,148.00,125.74,378,47.53,38.97,8.56,22.0,76,A
+res-s3-green-archival-02,Green Archival Store,Amazon S3,s3-standard,eu-north-1,Optimal,2.0,2.0,340000,720,272.00,231.10,28,6.47,5.31,1.16,95.0,98,A+
+res-lambda-auth-worker,Auth Token Validator,AWS Lambda,lambda-function,eu-north-1,Optimal,32.0,28.0,10,140,4.87,0.80,28,0.02,0.02,0.00,95.0,99,A+
+res-lambda-image-processor,Media Thumbnail Generator,AWS Lambda,lambda-function,ap-south-1,Warning,88.0,92.0,50,310,13.21,4.83,708,3.42,2.80,0.62,18.0,46,C
+res-ecs-search-cluster,Elasticsearch Search Nodes,Amazon ECS,ecs-task,us-west-2,Optimal,54.0,68.0,800,720,31.44,26.71,115,3.07,2.52,0.55,78.0,94,A+
+res-ec2-dev-sandbox-04,Dev Sandbox Workstation,Amazon EC2,t3.2xlarge,us-east-1,Critical,4.1,11.2,400,720,37.85,32.16,378,12.16,9.97,2.19,22.0,34,D (Inefficient)
+res-ec2-eu-cache-node,Redis Cache Cluster EU,Amazon EC2,r6i.2xlarge,eu-north-1,Optimal,62.0,84.0,300,720,120.04,101.99,28,2.86,2.35,0.51,95.0,97,A+
+res-rds-analytics-replica,Read Replica Analytics DB,Amazon RDS,db.r6g.xlarge,ap-southeast-1,Active,29.8,44.5,1500,720,55.78,47.39,412,19.53,16.01,3.52,12.0,58,C
