@@ -1,0 +1,387 @@
+================================================================================
+GIT COMMIT CONTRIBUTION EVIDENCE: K. RATNA SUBHASH
+Registration Number : 24BIT0489
+Feature Branch      : feature/Subhash (tracked as origin/feature/Subhash)
+Base Branch         : Forked from db4fe0a (July 31, 2026)
+Repository          : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026
+Audit Timestamp     : 2026-10-16T23:29:55.478953
+================================================================================
+
+SUMMARY METRICS:
+  Total Reachable Commits on Branch : 52
+  Unique Commits (since db4fe0a)    : 39
+  Verified Direct Author Commits    : 39
+  Inherited / Shared Base Commits   : 13
+
+--------------------------------------------------------------------------------
+A. COMMITS DIRECTLY AUTHORED BY K. RATNA SUBHASH (39 commits)
+--------------------------------------------------------------------------------
+
+Commit  : 3d177d7 (3d177d7faef7715f54896c846e1312dc6db0d76c)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-16 20:30:45 +0530
+Branch  : feature/Subhash
+Subject : docs: Update project documentation, README architecture badges, and review notes
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/3d177d7faef7715f54896c846e1312dc6db0d76c
+
+Commit  : 6c04018 (6c04018c0ee0920a24550a384f7b4a7e27ddf7fc)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-16 06:45:12 +0530
+Branch  : feature/Subhash
+Subject : chore(scripts): Add automated startup and validation batch scripts for Windows
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/6c04018c0ee0920a24550a384f7b4a7e27ddf7fc
+
+Commit  : 4461878 (44618788a116daebdbdc772a3d2648b5669ba21a)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-13 23:40:22 +0530
+Branch  : feature/Subhash
+Subject : fix(ui): Fix mobile responsiveness in ResourceTable and Sidebar navigation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/44618788a116daebdbdc772a3d2648b5669ba21a
+
+Commit  : 92596db (92596db96ab4ae85badb8a5f40df53046bf02085)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-13 20:15:40 +0530
+Branch  : feature/Subhash
+Subject : refactor(carbon): Optimize SPECPower lookup cache and memory footprint
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/92596db96ab4ae85badb8a5f40df53046bf02085
+
+Commit  : e9ca498 (e9ca49848aea0535855f1d825982a6331cd84d7c)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-10 22:50:42 +0530
+Branch  : feature/Subhash
+Subject : feat(ui): Add exportable Digital Carbon Passport PDF/JSON certificate modal
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/e9ca49848aea0535855f1d825982a6331cd84d7c
+
+Commit  : 1f0e58c (1f0e58cdc99eac574f8b3be1893c97634fabde7a)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-10 20:20:18 +0530
+Branch  : feature/Subhash
+Subject : feat(ui): Enhance RecommendationsView with carbon ROI calculations and one-click actions
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/1f0e58cdc99eac574f8b3be1893c97634fabde7a
+
+Commit  : 88a1c98 (88a1c98438ade724693ff25a467aded23619fdbe)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-10 01:15:32 +0530
+Branch  : feature/Subhash
+Subject : feat(ui): Add PipelineView component for tracking live ETL pipeline execution state
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/88a1c98438ade724693ff25a467aded23619fdbe
+
+Commit  : 7c9d993 (7c9d993dab437c9280591bbb0b25f30b12085209)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-07 23:10:45 +0530
+Branch  : feature/Subhash
+Subject : security(backend): Add environment configuration template and credential validation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/7c9d993dab437c9280591bbb0b25f30b12085209
+
+Commit  : 56dda87 (56dda87ba7affc36ecf117a3847676c92e84f70b)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-07 20:35:20 +0530
+Branch  : feature/Subhash
+Subject : docs(aws): Add comprehensive AWS Deployment Guide with CloudWatch and ECS setup
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/56dda87ba7affc36ecf117a3847676c92e84f70b
+
+Commit  : d93d2f9 (d93d2f9679f1dc9159bb19263a71bfa35429d454)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-04 23:50:18 +0530
+Branch  : feature/Subhash
+Subject : feat(ml): Add training script for multi-feature carbon model with workload profiling
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d93d2f9679f1dc9159bb19263a71bfa35429d454
+
+Commit  : 7670c84 (7670c84259a40a88680d7911b1cb808094d656f6)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-04 22:25:40 +0530
+Branch  : feature/Subhash
+Subject : feat(ui): Enhance ForecastView with interactive prediction horizon and confidence bands
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/7670c84259a40a88680d7911b1cb808094d656f6
+
+Commit  : 9cd61e2 (9cd61e201073c7d93d0d8f4ee9d690bd344d5561)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-04 20:10:15 +0530
+Branch  : feature/Subhash
+Subject : feat(ai): Integrate dynamic ML predictor with confidence interval estimation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/9cd61e201073c7d93d0d8f4ee9d690bd344d5561
+
+Commit  : cf705a8 (cf705a868e84714f97de346ba92132280c8f46c1)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-01 23:20:50 +0530
+Branch  : feature/Subhash
+Subject : docs: Add team work distribution matrix and project milestone breakdown
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/cf705a868e84714f97de346ba92132280c8f46c1
+
+Commit  : d012a87 (d012a87d4c3ecd2f8c820877f0b6f22e0be09904)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-10-01 20:15:20 +0530
+Branch  : feature/Subhash
+Subject : feat(ui): Add AWS Cloud Dashboard component for unified multi-service telemetry
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d012a87d4c3ecd2f8c820877f0b6f22e0be09904
+
+Commit  : 9894953 (989495346b54e88f7f819b17aa738ec9ae782d7c)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-28 22:55:38 +0530
+Branch  : feature/Subhash
+Subject : feat(ui): Add AWS Cost Explorer panel with cost vs emissions comparative charts
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/989495346b54e88f7f819b17aa738ec9ae782d7c
+
+Commit  : 8ecd8d1 (8ecd8d1abee96b96f98d4ae1f07dcf1a8cfd3043)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-28 20:40:15 +0530
+Branch  : feature/Subhash
+Subject : feat(aws): Implement AWS Cost Explorer adapter for hourly cost-to-carbon correlation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/8ecd8d1abee96b96f98d4ae1f07dcf1a8cfd3043
+
+Commit  : 19cf41a (19cf41ada8b31d4237327f6a455547f2ac0803e5)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-25 23:45:12 +0530
+Branch  : feature/Subhash
+Subject : feat(ui): Integrate CloudWatch usage panel into main dashboard view
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/19cf41ada8b31d4237327f6a455547f2ac0803e5
+
+Commit  : 66ea233 (66ea233fb186d6e2dfe4323ebfa8b4ef671cacc0)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-25 22:30:45 +0530
+Branch  : feature/Subhash
+Subject : feat(api): Add live CloudWatch telemetry streaming endpoint with regional fallback
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/66ea233fb186d6e2dfe4323ebfa8b4ef671cacc0
+
+Commit  : 699f65d (699f65d1d6bb90a4a436987be900d9e4576f5ff4)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-25 20:15:30 +0530
+Branch  : feature/Subhash
+Subject : feat(ui): Add AWS CloudWatch live usage metrics panel with auto-refresh
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/699f65d1d6bb90a4a436987be900d9e4576f5ff4
+
+Commit  : 70770c9 (70770c90bd7dc20878caeebff263e7e970f567ba)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-23 22:18:09 +0530
+Branch  : feature/Subhash
+Subject : docs: Add master ABOUT_ME project defense guide with dataset gathering, math models, and reviewer Q&A
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/70770c90bd7dc20878caeebff263e7e970f567ba
+
+Commit  : 08540c4 (08540c4b1f60e2eaed176f3b425dc70ee02e9210)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-23 22:06:42 +0530
+Branch  : feature/Subhash
+Subject : feat: Enhance Carbon Passport UI, add dynamic AI forecast & optimizations, and include Cloud review documentation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/08540c4b1f60e2eaed176f3b425dc70ee02e9210
+
+Commit  : 58f74c2 (58f74c2d0ee4f7557acb3d60f93d1382990787ab)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-21 23:40:15 +0530
+Branch  : feature/Subhash
+Subject : docs(objectives): Define project objectives, research scope, and cloud carbon targets
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/58f74c2d0ee4f7557acb3d60f93d1382990787ab
+
+Commit  : ff9c2d4 (ff9c2d4b370ecc402dd34babb3d66afb59d15802)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-19 23:15:40 +0530
+Branch  : feature/Subhash
+Subject : docs(results): Document model evaluation metrics and regression benchmark report
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/ff9c2d4b370ecc402dd34babb3d66afb59d15802
+
+Commit  : b52ddf8 (b52ddf856a08325206b6d22c8212c7f76e9893eb)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-19 21:30:15 +0530
+Branch  : feature/Subhash
+Subject : feat(ml): Add carbon prediction inference engine and model summary artifacts
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/b52ddf856a08325206b6d22c8212c7f76e9893eb
+
+Commit  : 5349cc0 (5349cc027305bb82796d142cd8a3f34c9cac9a60)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-19 19:50:30 +0530
+Branch  : feature/Subhash
+Subject : feat(ml): Implement carbon forecaster training script using historical time-series
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/5349cc027305bb82796d142cd8a3f34c9cac9a60
+
+Commit  : 59c4f6b (59c4f6bdf7ed2b437b4bd2be0b9820e1ea5fb96f)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-16 23:55:08 +0530
+Branch  : feature/Subhash
+Subject : test(db): Add database transaction tests and telemetry query performance benchmarks
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/59c4f6bdf7ed2b437b4bd2be0b9820e1ea5fb96f
+
+Commit  : 0e14804 (0e14804c562242463cb75ce6c0689f434413798b)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-16 22:05:19 +0530
+Branch  : feature/Subhash
+Subject : test(carbon): Add unit tests for carbon estimation engine and PUE multipliers
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/0e14804c562242463cb75ce6c0689f434413798b
+
+Commit  : 2236bda (2236bda6c5ebf1ebf98ce3cec1c97ccd3aea397b)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-16 20:10:45 +0530
+Branch  : feature/Subhash
+Subject : feat(pipeline): Implement streaming data pipeline for telemetry normalization
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/2236bda6c5ebf1ebf98ce3cec1c97ccd3aea397b
+
+Commit  : d0da4cb (d0da4cb538659999f6ffa9e81577d8cf1ef50aa8)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-13 22:50:18 +0530
+Branch  : feature/Subhash
+Subject : feat(carbon): Implement SPECPower polynomial curve fitting for server power calculation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d0da4cb538659999f6ffa9e81577d8cf1ef50aa8
+
+Commit  : 2f90f02 (2f90f0271a7ddbf7d5becad15e70e9adb5510863)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-13 20:25:34 +0530
+Branch  : feature/Subhash
+Subject : feat(db): Implement database connection client with connection pooling and health check
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/2f90f0271a7ddbf7d5becad15e70e9adb5510863
+
+Commit  : 8af3ba1 (8af3ba169782f0ed14992c931f9a8a2872c5efc5)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-10 23:40:02 +0530
+Branch  : feature/Subhash
+Subject : feat(db): Define PostgreSQL telemetry schema and relational tables for carbon tracking
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/8af3ba169782f0ed14992c931f9a8a2872c5efc5
+
+Commit  : ea05873 (ea05873ac15984a4002643093d27744c5dad602d)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-10 21:50:45 +0530
+Branch  : feature/Subhash
+Subject : feat(carbon): Establish emission coefficients and grid carbon intensity matrix
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/ea05873ac15984a4002643093d27744c5dad602d
+
+Commit  : 4350f2b (4350f2be52c862b152908cbe6b69ddc555d4e6a8)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-10 19:35:12 +0530
+Branch  : feature/Subhash
+Subject : dataset(processed): Add processed carbon telemetry timeseries JSON schema
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/4350f2be52c862b152908cbe6b69ddc555d4e6a8
+
+Commit  : bce4dc9 (bce4dc94c247ae4f4e5ea17562efa48ebe145709)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-06 22:45:10 +0530
+Branch  : feature/Subhash
+Subject : docs(dataset): Add dataset gathering methodology and literature review notes
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/bce4dc94c247ae4f4e5ea17562efa48ebe145709
+
+Commit  : b48893d (b48893d8a9c145a9d995fc4e0c83994071f50a9d)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-06 20:18:22 +0530
+Branch  : feature/Subhash
+Subject : dataset(raw): Ingest raw cloud telemetry dataset and schema definitions
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/b48893d8a9c145a9d995fc4e0c83994071f50a9d
+
+Commit  : bfacef9 (bfacef9f7e751ccc4ea5678b230bb42d6896dad9)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-03 23:28:44 +0530
+Branch  : feature/Subhash
+Subject : docs(aws): Add AWS services mapping and cloud footprint scoping document
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/bfacef9f7e751ccc4ea5678b230bb42d6896dad9
+
+Commit  : 99569ee (99569ee03157c25250d2aa51083cf841c331f404)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-03 21:15:30 +0530
+Branch  : feature/Subhash
+Subject : docs(arch): Document end-to-end system architecture and data flow pipeline
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/99569ee03157c25250d2aa51083cf841c331f404
+
+Commit  : 754710e (754710e703b6d229bacce9c8fd1076f908c787a7)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-09-03 19:42:15 +0530
+Branch  : feature/Subhash
+Subject : docs(aws): Define AWS CloudWatch telemetry ingestion and IAM policy specifications
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/754710e703b6d229bacce9c8fd1076f908c787a7
+
+Commit  : db4fe0a (db4fe0a12420bc53391556668eed261ef2d71815)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-07-31 22:44:45 +0530
+Branch  : feature/Subhash
+Subject : Add research gap document on Green AI
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/db4fe0a12420bc53391556668eed261ef2d71815
+
+--------------------------------------------------------------------------------
+B. INHERITED / SHARED COMMITS (13 commits)
+--------------------------------------------------------------------------------
+
+Commit  : 059f53d (059f53d56fea9fcf6d2bbebab854d24fb66b3c61)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-09-21 21:58:37 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : feat: Implement React + Vite + Express local MVP for AI-Powered Cloud Digital Carbon Passport Framework
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/059f53d56fea9fcf6d2bbebab854d24fb66b3c61
+
+Commit  : 2be7578 (2be757860b4ec34d8a8b5519bb4733f97175294b)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 21:31:40 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/2be757860b4ec34d8a8b5519bb4733f97175294b
+
+Commit  : d2c57c6 (d2c57c6c5c2f34465f06f332469a9269eb64b8dd)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 21:31:01 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d2c57c6c5c2f34465f06f332469a9269eb64b8dd
+
+Commit  : d9fea5d (d9fea5d59ad09af1a277a1164f05df952d5be771)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 21:30:47 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d9fea5d59ad09af1a277a1164f05df952d5be771
+
+Commit  : e65e674 (e65e67478c92046e4db7080800797fcbfb47b1a8)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 21:30:32 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/e65e67478c92046e4db7080800797fcbfb47b1a8
+
+Commit  : 343a78c (343a78c0f4ea7a38e26506bc5918b5d69063601a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 21:30:06 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/343a78c0f4ea7a38e26506bc5918b5d69063601a
+
+Commit  : dff3209 (dff32099f505f4999223935ae11b1788ae232c90)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 21:29:46 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/dff32099f505f4999223935ae11b1788ae232c90
+
+Commit  : 5b33e53 (5b33e5391f8a3fa6771f5100e17cb69149f4bc51)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 21:29:22 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/5b33e5391f8a3fa6771f5100e17cb69149f4bc51
+
+Commit  : 4bd163e (4bd163ea85716e719a8152cd2c8d37fc78ef501f)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 21:28:56 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/4bd163ea85716e719a8152cd2c8d37fc78ef501f
+
+Commit  : ad216f0 (ad216f06d5dcaee908eb04fba6fb945dffb4ed4b)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 21:28:39 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/ad216f06d5dcaee908eb04fba6fb945dffb4ed4b
+
+Commit  : 945b8b4 (945b8b47822cddc9901848219c3bfa4d9482abae)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 21:28:15 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md for architecture documentation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/945b8b47822cddc9901848219c3bfa4d9482abae
+
+Commit  : 4ab9f4c (4ab9f4c4c679ca650e1f4bc434f5d91b9e9a0e6a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 15:28:42 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Create README.md for project documentation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/4ab9f4c4c679ca650e1f4bc434f5d91b9e9a0e6a
+
+Commit  : 0ec3355 (0ec3355c2c5b7dccd3f06779e5b1560ced114faa)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> (Inherited from base/team development)
+Date    : 2026-07-31 15:27:24 +0530
+Branch  : feature/Subhash (Inherited)
+Subject : Initial commit
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/0ec3355c2c5b7dccd3f06779e5b1560ced114faa
+

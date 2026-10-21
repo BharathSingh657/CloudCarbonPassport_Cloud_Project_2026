@@ -1,0 +1,407 @@
+================================================================================
+GIT COMMIT CONTRIBUTION EVIDENCE: BHARATH D SINGH
+Registration Number : 24BIT0458
+Feature Branch      : feature/Bharath (tracked as origin/feature/Bharath)
+Base Branch         : main / initial setup
+Repository          : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026
+Audit Timestamp     : 2026-10-16T23:29:55.475938
+================================================================================
+
+SUMMARY METRICS:
+  Total Reachable Commits on Branch : 55
+  Unique Commits (since db4fe0a)    : 42
+  Verified Direct Author Commits    : 54
+
+--------------------------------------------------------------------------------
+A. UNIQUE COMMITS INTRODUCED ON feature/Bharath (42 commits)
+--------------------------------------------------------------------------------
+
+Commit  : e6c9040 (e6c904066cb9d431220881c7c5a6d15c6fe84059)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-16 21:10:15 +0530
+Branch  : feature/Bharath
+Subject : chore: finalize project release v1.0, update architecture mapping, quick-start scripts, and documentation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/e6c904066cb9d431220881c7c5a6d15c6fe84059
+
+Commit  : a2a6c3e (a2a6c3e333fd5f4d96cd463bb041d06912a86541)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-16 19:35:48 +0530
+Branch  : feature/Bharath
+Subject : test: execute full end-to-end regression test suite across backend, frontend, and ML forecaster
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/a2a6c3e333fd5f4d96cd463bb041d06912a86541
+
+Commit  : 97570fc (97570fc2cdd1073673a54eb79e43f87418ba29d4)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-15 01:10:29 +0530
+Branch  : feature/Bharath
+Subject : style(frontend): refine responsive card layouts, theme variables, and SVG visualizations
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/97570fc2cdd1073673a54eb79e43f87418ba29d4
+
+Commit  : 58a3702 (58a3702b7c37eee6b57fd6715bf44c69b7431363)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-14 22:40:37 +0530
+Branch  : feature/Bharath
+Subject : feat(frontend): implement AWS account inventory view, architecture inspector, and system settings
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/58a3702b7c37eee6b57fd6715bf44c69b7431363
+
+Commit  : 0127132 (0127132b22d70b71cc9e9d5d2337f9da536fceff)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-14 20:20:13 +0530
+Branch  : feature/Bharath
+Subject : feat(frontend): implement time-series forecast visualizer and AI right-sizing recommendations view
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/0127132b22d70b71cc9e9d5d2337f9da536fceff
+
+Commit  : 54a71b2 (54a71b22d057ebbfcebe7a45e467a0ee64667762)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-12 21:40:55 +0530
+Branch  : feature/Bharath
+Subject : feat(frontend): add real-time carbon KPI metrics summary and live CloudWatch telemetry feed
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/54a71b22d057ebbfcebe7a45e467a0ee64667762
+
+Commit  : df96a0b (df96a0b27487db1a858f3c1cdcc00715e2d735ab)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-12 19:30:41 +0530
+Branch  : feature/Bharath
+Subject : feat(frontend): build interactive Digital Carbon Passport explorer with SHA-256 verification
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/df96a0b27487db1a858f3c1cdcc00715e2d735ab
+
+Commit  : 9bdba23 (9bdba23aaccb8ca378b199c511e6e77679b8fccf)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-12 08:15:16 +0530
+Branch  : feature/Bharath
+Subject : feat(frontend): initialize React 18 + Vite SPA dashboard with custom CSS design tokens
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/9bdba23aaccb8ca378b199c511e6e77679b8fccf
+
+Commit  : cece25f (cece25f93e2cef08da840423665ae010e389ea3f)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-09 22:30:28 +0530
+Branch  : feature/Bharath
+Subject : docs(architecture): add complete AWS deployment guide and production network topology
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/cece25f93e2cef08da840423665ae010e389ea3f
+
+Commit  : 3cdb09e (3cdb09e72cf30d11c4de40ae2646025a0da3daf5)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-09 20:15:44 +0530
+Branch  : feature/Bharath
+Subject : feat(aws): add graceful empty inventory fallback and data provenance tagging (aws_live)
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/3cdb09e72cf30d11c4de40ae2646025a0da3daf5
+
+Commit  : 22ac497 (22ac497c9334e7e14c499f40bad3a057d9595c16)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-06 23:40:19 +0530
+Branch  : feature/Bharath
+Subject : feat(aws): configure IAM least-privilege policy for cloudwatch-project-user in ap-south-1
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/22ac497c9334e7e14c499f40bad3a057d9595c16
+
+Commit  : 2a977f6 (2a977f622789c25fdf9f07b3c451a750d386ace3)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-06 21:50:33 +0530
+Branch  : feature/Bharath
+Subject : feat(aws): implement AWS SDK v3 CloudWatch and Cost Explorer read-only adapters
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/2a977f622789c25fdf9f07b3c451a750d386ace3
+
+Commit  : 678978f (678978f9330799eef531fa3f2bc4042d829dc53c)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-06 19:45:07 +0530
+Branch  : feature/Bharath
+Subject : docs(ml): generate model evaluation report documenting out-of-time R² score of 0.8929
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/678978f9330799eef531fa3f2bc4042d829dc53c
+
+Commit  : 604ad0c (604ad0ccdf7d0f9b3a0877d7f620b8146dcfa53a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-02 22:20:14 +0530
+Branch  : feature/Bharath
+Subject : feat(ml): implement command-line inference script predict_carbon_forecast.py
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/604ad0ccdf7d0f9b3a0877d7f620b8146dcfa53a
+
+Commit  : 694a773 (694a77332348c11ada288ae12346f36b5b98276d)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-02 20:05:38 +0530
+Branch  : feature/Bharath
+Subject : feat(ml): export serialized model artifact 1.0.0-TS-RF with joblib compression
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/694a77332348c11ada288ae12346f36b5b98276d
+
+Commit  : 11683e3 (11683e32b51889388adffb02d7196a68c480d80e)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-10-02 00:45:21 +0530
+Branch  : feature/Bharath
+Subject : feat(ml): implement Random Forest regressor training pipeline on 8,640 hourly observations
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/11683e32b51889388adffb02d7196a68c480d80e
+
+Commit  : d536a8b (d536a8ba2592b93e95da03a8ece29a66ab900b89)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-29 22:45:49 +0530
+Branch  : feature/Bharath
+Subject : feat(dataset): import core 8,640-record processed carbon time-series dataset
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d536a8ba2592b93e95da03a8ece29a66ab900b89
+
+Commit  : 7b521f8 (7b521f8663bb966fa6d8121fcac795c0600183c1)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-29 20:30:17 +0530
+Branch  : feature/Bharath
+Subject : feat(api): implement request rate-limiting and structured error handling middleware
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/7b521f8663bb966fa6d8121fcac795c0600183c1
+
+Commit  : ba70422 (ba70422242fa8171351e351e043c5fdd4458ac65)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-26 22:10:55 +0530
+Branch  : feature/Bharath
+Subject : feat(api): add historical emission querying endpoint with regional filtering
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/ba70422242fa8171351e351e043c5fdd4458ac65
+
+Commit  : 243f9e4 (243f9e4be0f6a544dc0f0c03da43367f5983c2f1)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-26 20:15:33 +0530
+Branch  : feature/Bharath
+Subject : feat(api): implement REST endpoints for resource inventory and passport retrieval
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/243f9e4be0f6a544dc0f0c03da43367f5983c2f1
+
+Commit  : 00ef61e (00ef61e09316b7d46fab462fe8753540143922ab)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-26 01:25:11 +0530
+Branch  : feature/Bharath
+Subject : test(pipeline): create pipeline idempotency tests verifying zero duplicate rows
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/00ef61e09316b7d46fab462fe8753540143922ab
+
+Commit  : 41c35e7 (41c35e74689e4f106c31959c6b05d5383b40638c)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-23 23:30:44 +0530
+Branch  : feature/Bharath
+Subject : feat(pipeline): add SHA-256 digital provenance hash generator for carbon passports
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/41c35e74689e4f106c31959c6b05d5383b40638c
+
+Commit  : 4db9153 (4db915311fab9f328e78347305fb30b0a1d4ea28)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-23 21:45:26 +0530
+Branch  : feature/Bharath
+Subject : feat(pipeline): implement 5-stage automated ingestion pipeline with deduplication logic
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/4db915311fab9f328e78347305fb30b0a1d4ea28
+
+Commit  : 8fca8ff (8fca8fff1ad95ef0c828e9d7eeb3349dd640112b)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-23 19:50:09 +0530
+Branch  : feature/Bharath
+Subject : feat(backend): scaffold Express REST API server with security headers, CORS, and JSON parser
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/8fca8fff1ad95ef0c828e9d7eeb3349dd640112b
+
+Commit  : 9e62414 (9e624149b10fee194c565eb64f03282b58f7dc55)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-20 22:50:18 +0530
+Branch  : feature/Bharath
+Subject : test(db): add database integration test verifying ACID transactions and connection pool health
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/9e624149b10fee194c565eb64f03282b58f7dc55
+
+Commit  : 1c15cd1 (1c15cd1e73551ec7d956b91ccbd3b8490b796630)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-20 20:20:41 +0530
+Branch  : feature/Bharath
+Subject : feat(db): implement database migration scripts and composite index optimizations
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/1c15cd1e73551ec7d956b91ccbd3b8490b796630
+
+Commit  : 376ae8f (376ae8ffbbc6160e92353369df47f406c92915f1)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-17 23:15:37 +0530
+Branch  : feature/Bharath
+Subject : feat(db): configure connection pooling and transaction rollback handlers using node-pg
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/376ae8ffbbc6160e92353369df47f406c92915f1
+
+Commit  : f73e989 (f73e989f78d1b52b53e9adf397c1763f2a5e4a4f)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-17 21:30:52 +0530
+Branch  : feature/Bharath
+Subject : feat(db): add relational tables for emission records, passports, and predictions
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/f73e989f78d1b52b53e9adf397c1763f2a5e4a4f
+
+Commit  : 8299784 (82997843fdcd882478e777c56969066f814aabeb)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-17 19:40:15 +0530
+Branch  : feature/Bharath
+Subject : feat(db): design PostgreSQL 16 relational schema for resources and telemetry observations
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/82997843fdcd882478e777c56969066f814aabeb
+
+Commit  : 584b27d (584b27da21ea6dff5506a751a4478ba50fdd8d3e)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-14 22:15:29 +0530
+Branch  : feature/Bharath
+Subject : fix(carbon-engine): resolve floating point rounding precision in energy conversion
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/584b27da21ea6dff5506a751a4478ba50fdd8d3e
+
+Commit  : be585bc (be585bce564da876b757a8f3fb298eaf4e12582a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-14 20:10:48 +0530
+Branch  : feature/Bharath
+Subject : test(carbon-engine): add benchmark assertions against published SPECpower_ssj2008 data
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/be585bce564da876b757a8f3fb298eaf4e12582a
+
+Commit  : 1275a32 (1275a32218bf91dd0ac82738f0895c3830038bb8)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-14 07:35:12 +0530
+Branch  : feature/Bharath
+Subject : test(carbon-engine): create unit test suite for power curve boundary and edge conditions
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/1275a32218bf91dd0ac82738f0895c3830038bb8
+
+Commit  : d6f96cd (d6f96cdac1187c174a79c7ca3066808bf8f3388a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-11 22:40:05 +0530
+Branch  : feature/Bharath
+Subject : feat(carbon-engine): add Scope 3 embodied carbon per instance-hour allocation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d6f96cdac1187c174a79c7ca3066808bf8f3388a
+
+Commit  : ede9f5d (ede9f5d54d0479a8c2716eb3bac060185ef64426)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-11 20:45:22 +0530
+Branch  : feature/Bharath
+Subject : feat(carbon-engine): integrate PUE multiplier (1.18) and Scope 2 regional carbon factors
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/ede9f5d54d0479a8c2716eb3bac060185ef64426
+
+Commit  : e033317 (e0333179843ebcddd58005a506c535feebe3d859)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-08 23:25:31 +0530
+Branch  : feature/Bharath
+Subject : feat(carbon-engine): add memory and storage hardware power constants to energy model
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/e0333179843ebcddd58005a506c535feebe3d859
+
+Commit  : fab4b1d (fab4b1d520b91cf3f409771dfdf3ad34337d2651)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-08 21:50:14 +0530
+Branch  : feature/Bharath
+Subject : feat(carbon-engine): implement polynomial CPU load interpolation and idle power calibration
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/fab4b1d520b91cf3f409771dfdf3ad34337d2651
+
+Commit  : a8ae2eb (a8ae2ebf8883e8fd3796d878c7b9b3d24c89b727)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-08 19:35:50 +0530
+Branch  : feature/Bharath
+Subject : feat(carbon-engine): scaffold SPECPower calculation engine and module dependencies
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/a8ae2ebf8883e8fd3796d878c7b9b3d24c89b727
+
+Commit  : cea1cb5 (cea1cb59e7bacd74fbb8b18461b3c9271ef0583e)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-06 01:10:19 +0530
+Branch  : feature/Bharath
+Subject : test(ml): add chronological holdout validation script to prevent lookahead bias
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/cea1cb59e7bacd74fbb8b18461b3c9271ef0583e
+
+Commit  : 68516ad (68516ad5cdb3c446498c2d4f485e913db71c33e0)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-05 22:30:42 +0530
+Branch  : feature/Bharath
+Subject : feat(ml): implement cyclical diurnal sin/cos encoding for hourly workload data
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/68516ad5cdb3c446498c2d4f485e913db71c33e0
+
+Commit  : adfe84f (adfe84f42067acf776af15a736c82262a5c7c152)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-05 20:15:10 +0530
+Branch  : feature/Bharath
+Subject : feat(ml): scaffold time-series feature engineering pipeline with lag structures
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/adfe84f42067acf776af15a736c82262a5c7c152
+
+Commit  : a07224a (a07224a8dd18a75f24bbdbdde0be0043dc0ef2fb)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-02 21:40:35 +0530
+Branch  : feature/Bharath
+Subject : feat(dataset): configure regional carbon intensity factors and processed data structure
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/a07224a8dd18a75f24bbdbdde0be0043dc0ef2fb
+
+Commit  : 8dc3210 (8dc321013efbddd6ea12dc39755e1ff3a75da348)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-09-02 19:24:18 +0530
+Branch  : feature/Bharath
+Subject : feat(dataset): add raw telemetry dataset documentation and cloud resource schema
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/8dc321013efbddd6ea12dc39755e1ff3a75da348
+
+--------------------------------------------------------------------------------
+B. INHERITED / BASE COMMITS (13 commits)
+--------------------------------------------------------------------------------
+
+Commit  : db4fe0a (db4fe0a12420bc53391556668eed261ef2d71815)
+Author  : RatnaSubhash <kratnasubhash@gmail.com>
+Date    : 2026-07-31 22:44:45 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Add research gap document on Green AI
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/db4fe0a12420bc53391556668eed261ef2d71815
+
+Commit  : 2be7578 (2be757860b4ec34d8a8b5519bb4733f97175294b)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:31:40 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/2be757860b4ec34d8a8b5519bb4733f97175294b
+
+Commit  : d2c57c6 (d2c57c6c5c2f34465f06f332469a9269eb64b8dd)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:31:01 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d2c57c6c5c2f34465f06f332469a9269eb64b8dd
+
+Commit  : d9fea5d (d9fea5d59ad09af1a277a1164f05df952d5be771)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:30:47 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d9fea5d59ad09af1a277a1164f05df952d5be771
+
+Commit  : e65e674 (e65e67478c92046e4db7080800797fcbfb47b1a8)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:30:32 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/e65e67478c92046e4db7080800797fcbfb47b1a8
+
+Commit  : 343a78c (343a78c0f4ea7a38e26506bc5918b5d69063601a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:30:06 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/343a78c0f4ea7a38e26506bc5918b5d69063601a
+
+Commit  : dff3209 (dff32099f505f4999223935ae11b1788ae232c90)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:29:46 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/dff32099f505f4999223935ae11b1788ae232c90
+
+Commit  : 5b33e53 (5b33e5391f8a3fa6771f5100e17cb69149f4bc51)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:29:22 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/5b33e5391f8a3fa6771f5100e17cb69149f4bc51
+
+Commit  : 4bd163e (4bd163ea85716e719a8152cd2c8d37fc78ef501f)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:28:56 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/4bd163ea85716e719a8152cd2c8d37fc78ef501f
+
+Commit  : ad216f0 (ad216f06d5dcaee908eb04fba6fb945dffb4ed4b)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:28:39 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/ad216f06d5dcaee908eb04fba6fb945dffb4ed4b
+
+Commit  : 945b8b4 (945b8b47822cddc9901848219c3bfa4d9482abae)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:28:15 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md for architecture documentation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/945b8b47822cddc9901848219c3bfa4d9482abae
+
+Commit  : 4ab9f4c (4ab9f4c4c679ca650e1f4bc434f5d91b9e9a0e6a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 15:28:42 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Create README.md for project documentation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/4ab9f4c4c679ca650e1f4bc434f5d91b9e9a0e6a
+
+Commit  : 0ec3355 (0ec3355c2c5b7dccd3f06779e5b1560ced114faa)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 15:27:24 +0530
+Branch  : feature/Bharath (Inherited)
+Subject : Initial commit
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/0ec3355c2c5b7dccd3f06779e5b1560ced114faa
+

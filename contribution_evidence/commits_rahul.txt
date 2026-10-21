@@ -1,0 +1,215 @@
+================================================================================
+GIT COMMIT CONTRIBUTION EVIDENCE: R. RAHUL PADMANABAN
+Registration Number : 24BIT0473
+Feature Branch      : feature/rahul (tracked as origin/feature/rahul)
+Base Branch         : Forked from 2be7578 (commit 14 of initial setup)
+Merge Integration   : Merged into develop via PR #1 (commit 32cc49e)
+Repository          : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026
+Audit Timestamp     : 2026-10-16T23:29:55.482017
+================================================================================
+
+SUMMARY METRICS & HISTORICAL LIMITATION NOTE:
+  Total Reachable Commits on Branch : 26
+  Unique Commits (since 2be7578)    : 14
+  Commits Authored under 'Rahul'    : 0
+  Commits Authored by BharathSingh657 on Branch : 26
+
+  [EXPLANATORY LIMITATION NOTE]:
+  The feature branch 'feature/rahul' contains 12 unique commits created on July 31, 2026,
+  introducing the project's literature survey, abstract, research gap, objectives, novelty,
+  dataset details, AWS services mapping, work distribution, and architecture documentation.
+  However, Git author metadata attributes these commits to 'BharathSingh657 <bharathsingh657@gmail.com>'.
+  This indicates these files were pushed on the feature/rahul branch via Bharath's Git credentials
+  on Rahul's behalf. In accordance with strict auditing guidelines, commit authorship is recorded
+  accurately below without fabricating missing metadata.
+
+--------------------------------------------------------------------------------
+A. UNIQUE COMMITS INTRODUCED ON feature/rahul (14 commits)
+--------------------------------------------------------------------------------
+
+Commit  : 161877e (161877e73795f0f85fe9c841de8b5a7c3a14d941)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:46:28 +0530
+Branch  : feature/rahul
+Subject : Create dataset_description.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/161877e73795f0f85fe9c841de8b5a7c3a14d941
+
+Commit  : 3f3b322 (3f3b322a1a5051b448500f4e0a0426f4e40166d0)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:46:08 +0530
+Branch  : feature/rahul
+Subject : Create Workflow.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/3f3b322a1a5051b448500f4e0a0426f4e40166d0
+
+Commit  : dba57d7 (dba57d7399220da1479e7a612fbea50261c662b8)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:45:56 +0530
+Branch  : feature/rahul
+Subject : Create System_Architecture.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/dba57d7399220da1479e7a612fbea50261c662b8
+
+Commit  : 8fc7951 (8fc79514ca9a1e1a5841fb83b3eb79247698efec)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:45:44 +0530
+Branch  : feature/rahul
+Subject : Create AWS_Architecture.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/8fc79514ca9a1e1a5841fb83b3eb79247698efec
+
+Commit  : b194201 (b194201f41a6555ed3553a5e607275c4977a6613)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:45:15 +0530
+Branch  : feature/rahul
+Subject : Create Work_Distribution.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/b194201f41a6555ed3553a5e607275c4977a6613
+
+Commit  : 61a9c7f (61a9c7fbb6231e1bced4a62364fe9b7d7979ed3a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:45:03 +0530
+Branch  : feature/rahul
+Subject : Create AWS_Services.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/61a9c7fbb6231e1bced4a62364fe9b7d7979ed3a
+
+Commit  : 5a4e3db (5a4e3dbfae5782154d9c3e366f073072b46d6978)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:44:50 +0530
+Branch  : feature/rahul
+Subject : Create Dataset_Details.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/5a4e3dbfae5782154d9c3e366f073072b46d6978
+
+Commit  : 5f197ee (5f197ee552ed389473e912c292618ea93213a376)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:44:36 +0530
+Branch  : feature/rahul
+Subject : Create Novelty.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/5f197ee552ed389473e912c292618ea93213a376
+
+Commit  : 5b7477d (5b7477d7c46776c49c5fbe70aec7c7fc02ade92d)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:44:25 +0530
+Branch  : feature/rahul
+Subject : Create Objectives.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/5b7477d7c46776c49c5fbe70aec7c7fc02ade92d
+
+Commit  : 6cc4fab (6cc4fabeca0a92616a3c1f91a86b39f9451588ad)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:44:13 +0530
+Branch  : feature/rahul
+Subject : Create Research_Gap.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/6cc4fabeca0a92616a3c1f91a86b39f9451588ad
+
+Commit  : caf77af (caf77af48adb04a43dc1c40c0f44516d6b32d5a0)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:44:02 +0530
+Branch  : feature/rahul
+Subject : Create Literature_Survey.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/caf77af48adb04a43dc1c40c0f44516d6b32d5a0
+
+Commit  : c2e4f34 (c2e4f343c715b90935c1a2c529cc70d9fb6043ca)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:43:42 +0530
+Branch  : feature/rahul
+Subject : Create Abstract.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/c2e4f343c715b90935c1a2c529cc70d9fb6043ca
+
+Commit  : 89a42a0 (89a42a09973f1cd1d5b84874bed3dc5a200678e9)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:41:23 +0530
+Branch  : feature/rahul
+Subject : Update README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/89a42a09973f1cd1d5b84874bed3dc5a200678e9
+
+Commit  : 97854c4 (97854c4ac39176ff588953aec624d1d38fd81d7a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com> [Recorded on feature/rahul branch]
+Date    : 2026-07-31 21:40:47 +0530
+Branch  : feature/rahul
+Subject : Update README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/97854c4ac39176ff588953aec624d1d38fd81d7a
+
+--------------------------------------------------------------------------------
+B. INHERITED BASE COMMITS (12 commits)
+--------------------------------------------------------------------------------
+
+Commit  : 2be7578 (2be757860b4ec34d8a8b5519bb4733f97175294b)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:31:40 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/2be757860b4ec34d8a8b5519bb4733f97175294b
+
+Commit  : d2c57c6 (d2c57c6c5c2f34465f06f332469a9269eb64b8dd)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:31:01 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d2c57c6c5c2f34465f06f332469a9269eb64b8dd
+
+Commit  : d9fea5d (d9fea5d59ad09af1a277a1164f05df952d5be771)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:30:47 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/d9fea5d59ad09af1a277a1164f05df952d5be771
+
+Commit  : e65e674 (e65e67478c92046e4db7080800797fcbfb47b1a8)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:30:32 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/e65e67478c92046e4db7080800797fcbfb47b1a8
+
+Commit  : 343a78c (343a78c0f4ea7a38e26506bc5918b5d69063601a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:30:06 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/343a78c0f4ea7a38e26506bc5918b5d69063601a
+
+Commit  : dff3209 (dff32099f505f4999223935ae11b1788ae232c90)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:29:46 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/dff32099f505f4999223935ae11b1788ae232c90
+
+Commit  : 5b33e53 (5b33e5391f8a3fa6771f5100e17cb69149f4bc51)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:29:22 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/5b33e5391f8a3fa6771f5100e17cb69149f4bc51
+
+Commit  : 4bd163e (4bd163ea85716e719a8152cd2c8d37fc78ef501f)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:28:56 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/4bd163ea85716e719a8152cd2c8d37fc78ef501f
+
+Commit  : ad216f0 (ad216f06d5dcaee908eb04fba6fb945dffb4ed4b)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:28:39 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/ad216f06d5dcaee908eb04fba6fb945dffb4ed4b
+
+Commit  : 945b8b4 (945b8b47822cddc9901848219c3bfa4d9482abae)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 21:28:15 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md for architecture documentation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/945b8b47822cddc9901848219c3bfa4d9482abae
+
+Commit  : 4ab9f4c (4ab9f4c4c679ca650e1f4bc434f5d91b9e9a0e6a)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 15:28:42 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Create README.md for project documentation
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/4ab9f4c4c679ca650e1f4bc434f5d91b9e9a0e6a
+
+Commit  : 0ec3355 (0ec3355c2c5b7dccd3f06779e5b1560ced114faa)
+Author  : BharathSingh657 <bharathsingh657@gmail.com>
+Date    : 2026-07-31 15:27:24 +0530
+Branch  : feature/rahul (Inherited setup)
+Subject : Initial commit
+URL     : https://github.com/BharathSingh657/CloudCarbonPassport_Cloud_Project_2026/commit/0ec3355c2c5b7dccd3f06779e5b1560ced114faa
+
