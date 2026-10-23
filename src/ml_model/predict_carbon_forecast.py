@@ -49,16 +49,24 @@ def generate_7day_forecast(
         dow = forecast_time.dayofweek
         is_weekend = 1 if dow in (5, 6) else 0
 
+        # Calculate current carbon and power baseline
+        energy_kwh = (power_watts * 1.0 * pue) / 1000.0
+        current_carbon = (energy_kwh * carbon_intensity) / 1000.0
+
         features = pd.DataFrame([{
+            "carbon_lag_24h": current_carbon,
+            "carbon_lag_1h": current_carbon,
+            "cpu_lag_1h": current_cpu,
+            "cpu_lag_2h": current_cpu,
+            "cpu_lag_24h": rolling_24h[0],
+            "cpu_lag_168h": rolling_24h[0] * (0.85 if is_weekend else 1.0),
+            "power_watts": power_watts,
+            "energy_kwh": energy_kwh,
             "hour_sin": math.sin(2 * math.pi * hour / 24.0),
             "hour_cos": math.cos(2 * math.pi * hour / 24.0),
             "dow_sin": math.sin(2 * math.pi * dow / 7.0),
             "dow_cos": math.cos(2 * math.pi * dow / 7.0),
             "is_weekend": is_weekend,
-            "cpu_lag_1h": current_cpu,
-            "cpu_lag_2h": current_cpu,
-            "cpu_lag_24h": rolling_24h[0],
-            "cpu_lag_168h": rolling_24h[0] * (0.85 if is_weekend else 1.0),
             "cpu_rolling_mean_6h": np.mean(rolling_24h[-6:]),
             "cpu_rolling_std_6h": float(np.std(rolling_24h[-6:])),
             "cpu_rolling_mean_24h": np.mean(rolling_24h),
